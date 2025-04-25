@@ -173,8 +173,8 @@ This ensures compatibility with A11Y (accessibility) standards. In cases where a
 - Buttons follow the `.btn-i` class with responsive full-width behavior
 
 
-### 📌 Layout and Section Structure
-#### 🏠 Section Types
+## 📌 Layout and Section Structure
+### 🏠 Section Types
 Each section in the theme follows a basic structure, which can be identified by specific class names like ._home, ._blog, ._shop, and ._product. The basic structure for these sections is as follows:
 
 
@@ -203,6 +203,8 @@ Copiar
 
 **._product:** Used to display individual product details, including images, pricing, and descriptions.
 
+---
+
 ### 📐 Flexbox Layouts
 The .flex class is used within sections to create flexible and responsive layouts, especially for grids and content organization. It typically includes settings for item spacing, alignment, and positioning.
 
@@ -216,7 +218,7 @@ The .flex class is used within sections to create flexible and responsive layout
 }
 ```
 
-### Important Notes:
+#### Important Notes:
 
 The .flex class uses display: flex to enable flexible box layouts.
 The flex-wrap: wrap ensures that the items will wrap onto the next line when the container is too narrow.
@@ -230,7 +232,7 @@ For medium-sized screens (e.g., min-width: 992px), the gap could increase to 2vw
 These variations ensure the layout adapts based on screen size, maintaining visual balance across devices.
 
 
-### 🧩 Example Usage
+### 🧩 Grid with Flex
 Grid Layout: Inside a .body section, you might use .flex to create a responsive grid of products or images.
 
 
@@ -253,6 +255,64 @@ Flexible Item Alignment: You can adjust the alignment of items inside a .flex co
   align-items: flex-start; /* Align items to the top */
 }
 ```
+
+---
+
+## 🎨 Funnies and Customization
+In this project, we use animated characters called "Funnies" implemented using SVG graphics. These characters can be dynamically styled with different color themes by applying specific classes.
+
+Each character is represented by an SVG element wrapped in a <figure> tag. Here’s an example of a character:
+
+
+```html
+<figure class="fun fun-persimmon _eating _1">
+  <span class="_body _skin">
+    <svg >
+    </svg>
+  </span>
+</figure>
+```
+
+### 🎨 Color Customization for Funnies
+You can change the color of each character by applying a color-specific class to the <figure> tag. The available colors are:
+
+
+```bash
+.fun-persimmon: #ED5C2F (Persimmon)
+
+.fun-marigold: #FF7F4D (Marigold)
+
+.fun-peppercorn: #383A3D (Peppercorn)
+
+.fun-rosemary: #208961 (Rosemary)
+
+.fun-bubblegum: #FFA9E7 (Bubblegum)
+
+.fun-cornflower: #3973C6 (Cornflower)
+
+.fun-canary: #FFD664 (Canary)
+
+.fun-butter: #FBEAA8 (Butter)
+
+.fun-dust: #1E429B (Dust)
+
+```
+For example, to apply the "Persimmon" color, you would use the fun-persimmon class as shown below:
+
+
+```html
+<figure class="fun fun-persimmon _eating _1">
+  <!-- SVG content here -->
+</figure>
+
+```
+This will apply the color #ED5C2F to the character's skin.
+
+#### 📂 File Structure for Funnies
+The animations and colors are defined in the funnies.liquid file and styled in the corresponding CSS file for funnies. When adding or modifying these characters, make sure to follow the established structure for proper integration into the page.
+
+
+---
 
 ### 📦 Container Layouts
 In addition to the .flex layouts, the theme uses .container classes to manage the width and positioning of elements within sections. The .container ensures consistent margins and spacing across devices.
