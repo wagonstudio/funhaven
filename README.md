@@ -1,11 +1,14 @@
-# Shopify Theme for Funhaven
+# 🍄 Funhaven by Wagon Studio
 
-This is a Shopify theme for [client or project name]. Below are the instructions and configuration details.
+This repository contains the custom **Shopify theme** developed for the project [Funhaven](https://funhaven.com).
 
-## Development Instructions
+> ✨ Designed and developed with a strong focus on animation, performance, and a seamless visual experience for a bold, modern brand.
 
-### Installation
+---
 
+## 🔧 Development Instructions
+
+### 🛠️ Installation
 1. **Clone the repository**: To start working with this theme, clone the repository to your local machine:
 
     ```bash
@@ -14,10 +17,10 @@ This is a Shopify theme for [client or project name]. Below are the instructions
 
 2. **Install dependencies**: If you use tools like Shopify CLI to interact with the theme, make sure to have it installed. More details on [Shopify CLI](https://shopify.dev/tools/shopify-cli).
 
-### Project Structure
-
+### 🗂️ Project Structure
 The project follows this basic structure:
 
+```bash
 /assets
 ├── styles/
 │   ├── theme.css.liquid
@@ -29,16 +32,17 @@ The project follows this basic structure:
 
 /layout
 └── theme.liquid
+```
 
 - **/assets**: Contains style files, images, and fonts.
 - **/layout**: Contains the main `theme.liquid` file, which is the base file of the theme.
 
-## Usage Instructions
+## 🎨 Usage Instructions
 
 #### 🧪 Master Page (Main Template)
 The master page acts as a style guide, defining global layout, typography, and reusable design tokens. Font sizes and spacing use vw units for fluid responsiveness.
 
-#### Typography
+#### ✍️ Typography
 
 Use title classes consistently for headings:
 
@@ -49,7 +53,7 @@ Use title classes consistently for headings:
 This structure applies to all title classes (like .title-1, .title-2, etc.) and text classes (like .text-l, .text-m). It doesn't matter if we use h1, h2, or h3, as the styles will be applied consistently.
 
 
-#### CSS Sample Snippets
+#### 💅 CSS Sample Snippets
 Below are some CSS rules from the master page that control the overall layout and text styles:
 
 ```css
@@ -83,7 +87,7 @@ main._master ._subtitle {
 }
 ```
 
-### Font Sizes and Responsive Design
+#### 📐 Font Sizes and Responsive Design
 Font sizes and button dimensions are defined using vw for responsiveness across devices.
 
 The design scales automatically based on the viewport width, ensuring a consistent look on desktop and mobile.
@@ -127,7 +131,9 @@ To maintain accessibility and flexibility for animations or transitions, images 
 
 This ensures compatibility with A11Y (accessibility) standards. In cases where animation or positioning is needed, it's recommended to place the image as a DOM element rather than using background-image in CSS.
 
-### Recommended Structure
+#### 💻 Recommended Structure
+
+##### HTML
 ```html
 <div class="_content">
   <div class="_info">
@@ -139,7 +145,7 @@ This ensures compatibility with A11Y (accessibility) standards. In cases where a
 </div>
 ```
 
-### CSS Example
+##### CSS
 ```css
 ._content {
   position: relative;
@@ -167,15 +173,61 @@ This ensures compatibility with A11Y (accessibility) standards. In cases where a
 - Typography should use `.title-*` and `.text-*` classes for consistency
 - Buttons follow the `.btn-i` class with responsive full-width behavior
 
----
-
-## ✅ Final Notes
-
-This theme is structured to support scalable, maintainable, and visually consistent development. For any questions or contributions, feel free to contact the Wagon Studio dev team.
 
 ---
 
-Happy Theming! 🎨
+## 🔧 Technologies Used
 
-Wagon Design Studio  
-[codevamon](https://github.com/codevamon)
+This theme leverages modern, high-performance front-end tools and animation libraries:
+
+### 🧱 CSS & Frameworks
+
+- [Bootstrap 5.3.3](https://getbootstrap.com/)
+- [Bootstrap Icons](https://icons.getbootstrap.com/)
+- [Splide.js Core CSS](https://splidejs.com/)
+- [Splitting.js](https://splitting.js.org/)
+
+### ⚙️ JavaScript & Animations
+
+- [CartJS](https://cartjs.org/)
+- [GSAP 3 (GreenSock)](https://gsap.com/)
+  - Includes: GSAP Core, ScrollToPlugin, TweenMax, TimelineMax
+- [ScrollMagic](https://scrollmagic.io/)
+  - With GSAP integration and debug indicators
+- [Flickity](https://flickity.metafizzy.co/)
+- [Splide.js (v3.1.5)](https://splidejs.com/)
+- [Lenis](https://lenis.studiofreight.com/) – Smooth scrolling
+- [Splitting.js](https://splitting.js.org/)
+- [jQuery 3.6.0](https://jquery.com/)
+- [Popper.js](https://popper.js.org/) – Required for Bootstrap tooltips
+
+---
+
+## 🧠 Project Overview
+
+This theme is fully structured for Shopify and can be installed directly via the admin panel.
+
+- Built with flexible, modular sections
+- Enhanced with smooth scroll animations and visual effects
+- Mobile-first and responsive-ready
+- Lightweight and optimized for fast rendering
+
+
+---
+
+## 👤 Credits
+
+### 💻 Developed by  
+**[@codevamon](https://github.com/codevamon)** – Fullstack developer specializing in advanced front-end animation, Shopify, and high-impact interface design.
+
+### 🎨 In collaboration with  
+**[Wagon Studio](https://github.com/wagonstudio)** – A creative studio focused on branding, web development, and digital design for startups.  
+🌐 Website: [wagondesignstudio.com](https://wagondesignstudio.com)
+
+
+---
+
+## ⚠️ License
+
+This project is private and exclusive to the Funhaven brand.  
+For collaborations or theme licensing inquiries, contact us via [Wagon Studio](https://wagondesignstudio.com).
