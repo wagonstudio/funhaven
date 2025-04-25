@@ -1,0 +1,64 @@
+<section class="_merch _i" style="background-color: {{ section.settings.background_color }};">
+  <div class="_content">
+    <div class="_container full-1">
+      <div class="_inside">
+        <div class="_head">
+          <div class="title-1"><h1 data-splitting>{{ section.settings.heading | escape }}</h1></div>
+        </div>
+        <div class="_collection">
+          {% assign fallback_collection = collections['merch'] %}
+          
+          {% if fallback_collection.products.size > 1 %}
+            <div class="merch-products">
+              {% for related_product in fallback_collection.products %}
+                {% unless related_product.id == product.id %}
+                  {% render 'cardpdp', product: related_product, forloop: forloop %}
+                {% endunless %}
+              {% endfor %}
+            </div>
+          {% else %}
+            <div class="merch-products">
+              <div class="merch-pdp _1">
+                <figure>
+                  <img src="https://cdn.shopify.com/s/files/1/0619/3971/2098/files/merch_1.png?v=1745125837">
+                </figure>
+              </div>
+              <div class="merch-pdp _2">
+                <figure>
+                  <img src="https://cdn.shopify.com/s/files/1/0619/3971/2098/files/merch_2.png?v=1745125837">
+                </figure>
+              </div>
+            </div>
+          {% endif %}
+
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Merch",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background color",
+        "default": "#fff7eb"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Our merch (coming soon)"
+      },
+      {
+        "type": "richtext",
+        "id": "description",
+        "label": "Description",
+        "default": "<p>Need something to feel great in, no matter whether you’re working at home, hanging on the couch, or on the move exploring the world? We got you! Check out our limited edition pieces that we created just for you,)</p>"
+      }
+    ]
+  }
+{% endschema %}

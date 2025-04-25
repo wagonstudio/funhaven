@@ -1,0 +1,40 @@
+<section class="_product _ii" style="background-color: {{ section.settings.background_color }};">
+  <span id="trigger_product_ii_1" class="_trigger"></span>
+  <span id="trigger_product_ii_2" class="_trigger"></span>
+  <span id="trigger_product_ii_3" class="_trigger"></span>
+  <span id="trigger_product_ii_4" class="_trigger"></span>
+  <span id="trigger_product_ii_5" class="_trigger"></span>
+  <div class="_container full-3">
+    <figure class="_land">
+      <img src="https://cdn.shopify.com/s/files/1/0619/3971/2098/files/land_1.svg?v=1745507715">
+    </figure>
+  </div>
+</section>
+
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function () {
+    let controller_product = new ScrollMagic.Controller({refreshInterval: 0});  
+    let product_height_i = $("section._product._i").height();
+    let product_height_ii = $("section._product._ii").height();
+    
+    var product_anim_i_1 = TweenMax.to("section._product._ii ._land img", 0.5, {transform: "translateY(10%) scale(1)", ease: Power1.easeInOut});
+    new ScrollMagic.Scene({triggerElement: "#trigger_product_ii_1", duration: (product_height_ii * 2) })
+      .setTween(product_anim_i_1)
+      .triggerHook(0.5)
+      .addIndicators()
+      .addTo(controller_product);
+  });
+</script>
+{% schema %}
+  {
+    "name": "Product II",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background color",
+        "default": "#fff7eb"
+      }
+    ]
+  }
+{% endschema %}

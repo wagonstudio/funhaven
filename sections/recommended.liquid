@@ -1,0 +1,54 @@
+<section class="_recommended _i" style="background-color: {{ section.settings.background_color }};">
+  <div class="_content">
+    <div class="_container full-1">
+      <div class="_inside">
+        <div class="_head">
+          <div class="title-1"><h1 data-splitting>{{ section.settings.heading | escape }}</h1></div>
+        </div>
+        <div class="_collection">
+          {% assign recommended = product.recommendations.products %}
+          {% assign fallback_collection = collections['shop'] %}
+          
+          {% if recommended.size > 0 %}
+            <div class="related-products">
+              {% for related_product in recommended %}
+                {% unless related_product.id == product.id %}
+                  {% render 'cardpdp', product: related_product, forloop: forloop %}
+                {% endunless %}
+              {% endfor %}
+            </div>
+          {% elsif fallback_collection.products.size > 1 %}
+            <div class="related-products">
+              {% for related_product in fallback_collection.products %}
+                {% unless related_product.id == product.id %}
+                  {% render 'cardpdp', product: related_product, forloop: forloop %}
+                {% endunless %}
+              {% endfor %}
+            </div>
+          {% endif %}
+
+          </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Product III",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background color",
+        "default": "#fff7eb"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Shop our products!"
+      }
+    ]
+  }
+{% endschema %}

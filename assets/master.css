@@ -1,0 +1,789 @@
+/* I */
+  body.page-107753341101 #shopify-section-head {
+    display: none;
+  }
+  main._master ._full>._header {
+    margin-top: 3rem;
+  }
+  main._master ._full ._body>._flex {
+    grid-gap: 4vw;
+    margin-bottom: 4vw;
+    row-gap: 4vw;
+  }
+  main._master ._full>._header ._title {
+    font-family: 'TAYAmaya', sans-serif;
+    font-weight: 900;
+    line-height: 90%;
+    color: #BFBFBF;
+  }
+  main._master ._subtitle{
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    border-bottom: 1px solid #191919;
+    color: #191919;
+    font-family: 'TAYAmaya', sans-serif;
+  }
+  main._master ._full._1 .row>._2 ._body._1>._flex {
+    justify-content: space-between;
+  }
+  main._master ._full._1 .row>._2 ._body>._flex {
+    grid-gap: 1%;
+    flex-wrap:wrap;
+  }
+  main._master ._full._1 .row>._2 ._body._2>._flex ._item {
+    width: 100%;
+  }
+  main._master ._full ._body._2 {
+    padding: 1rem;
+  }
+  main._master ._item ._detail {
+    font-family: 'TAYAmaya', sans-serif;
+  }
+/* END I */
+/* TITLES */
+  ._xlgh,
+  ._xlgh * {
+      font-weight:100;
+  }
+  ._lgh,
+  ._lgh * {
+      font-weight:200;
+  }
+  ._smlgh,
+  ._smlgh * {
+      font-weight:300;
+  }
+  ._rgl,
+  ._rgl * {
+      font-weight:400;
+  }
+  ._mdm,
+  ._mdm * {
+      font-weight:500;
+  }
+  ._smbld,
+  ._smbld * {
+      font-weight:600;
+  }
+  ._bld,
+  ._bld * {
+      font-weight:700;
+  }
+  ._xbld,
+  ._xbld * {
+      font-weight:800;
+  }
+  ._blc,
+  ._blc * {
+      font-weight:800;
+  }
+  ._capitalize{
+      text-transform:capitalize;
+  }
+  ._uppercase{
+      text-transform:uppercase;
+  }
+  .text-message, 
+  .text-message * {
+    font-family: 'Delicious Handrawn', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+  }
+  .title-1,
+  .title-1 * {
+    font-family: 'TayKari', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%; 
+  }
+  .title-2,
+  .title-2 *{
+    font-family: 'TayKari', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%;
+  }
+  .title-3,
+  .title-3 * {
+    font-family: 'TAYAmaya', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+  }
+  .title-4,
+  .title-4 * {
+    font-family: 'TayKari', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 106%; 
+  }
+  .title-5,
+  .title-5 * {
+    font-family: 'TAYAmaya', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+  }
+  .title-6,
+  .title-6 * {
+    font-family: 'TAYAmaya', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+  }
+  .text-l,
+  .text-l * {
+    font-family: 'Dazzed', sans-serif;
+    font-style: normal;
+    font-weight: 330;
+    line-height: 150%; 
+  }
+  .text-m,
+  .text-m *{
+    font-family: 'Dazzed', sans-serif;
+    font-style: normal;
+    font-weight: 330;
+    line-height: 140%;
+  }
+  .text-s,
+  .text-s *{
+    font-family: 'Dazzed', sans-serif;
+    font-style: normal;
+    font-weight: 330;
+    line-height: 123%;
+  }
+  .product-name,
+  .product-name *{
+    font-family: 'TayKari', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90%;
+  }
+  .text-marquee,
+  .text-marquee *{
+    font-family: 'TAYAmaya', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 106%;
+  }
+  .text-btn,
+  .text-btn *{
+    font-family: 'TAYAmaya', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 106%;
+  }
+  .link-1{
+    font-family: 'TAYAmaya', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 106%;
+    position:relative;
+  }
+  .link-1:before{
+    content:'';
+    position:absolute;
+    top:100%;
+    width:0;
+    height:0.15vw;
+    left:0;
+    right:0;
+    margin:0 auto;
+      transition:all 0.15s cubic-bezier(.86,0,.12,1);
+  }
+  .link-1:hover:before{
+    width:100%;
+  }
+/* END TITLES */
+/* BUTTONS */
+  ._btn{
+      cursor:pointer !important;
+  }
+  ._btn:not(._fullwidth){
+      width: max-content;
+  }
+  ._btn,
+  ._btn *,
+  ._btn>._real,
+  ._btn>._real>._icon svg{
+      transition:all 0.15s cubic-bezier(.86,0,.12,1);
+  }
+  ._btn._fullwidth>._real {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  .btn-i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: 0;
+    background: inherit;
+  }
+  .btn-i.bg-sand {
+    background:#F9EEDA;
+    color:#3973C6;
+  }
+
+/* END BUTTONS */
+/* COLORS */
+  .text-persimmon{
+    color:#ED5C2F;
+  }
+  .text-dust{
+    color:#1E429B;
+  }
+  .text-evergreen{
+    color:#095535;
+  }
+  .text-marigold{
+    color:#FF7F4D;
+  }
+  .text-peppercorn{
+    color:#393B3E;
+  }
+  .text-sand{
+    color:#F9EEDA;
+  }
+  .text-cornflower{
+    color:#3973C6;
+  }
+  .text-cloud{
+    color:#FCF9EF;
+  }
+/* END COLORS */
+/* RESPONSIVE */
+  @media(min-width:1200px) {
+      main._master ._full>._header ._title {
+        font-size: 5.56vw;
+      }
+      main._master ._subtitle,
+      ._item ._detail {
+        font-size: 1.12vw;
+      }
+      main._master ._full._1 .row>._2 ._body._2>._flex ._item{
+        margin-bottom:1rem;
+      }
+      body .form-floating>.form-control, 
+      body .form-floating>.form-control-plaintext {
+        padding: 0.95vw 0;
+        font-size:0.95vw;
+      }
+      body .form-floating>label {
+        padding: 0.95vw 0;
+        font-size:0.95vw;
+      }
+      .title-1,
+      .title-1 *{
+        font-size: 5.9vw;
+      }
+      .title-2,
+      .title-2 * {
+        font-size: 5vw;
+      }
+      .title-3,
+      .title-3 *{
+        font-size: 3.13vw;
+      }
+      .title-4,
+      .title-4 * {
+        font-size: 2.2vw;
+      }
+      .title-5,
+      .title-5 *,
+      .btn-i,
+      .btn-i *{
+        font-size: 1.66vw;
+      }
+      .title-6,
+      .title-6 * {
+        font-size: 1.38vw;
+      }
+      section._header._1 .in-header>div>._flex ._second ._icons ._icon img{
+        width: 1.1vw;
+        height: 1.1vw;
+        object-fit: contain;
+      }
+      ._badge,
+      .text-l,
+      .text-l * {
+        font-size: 1.2vw;
+      }
+      .text-m,
+      .text-m * {
+        font-size: 1.1vw;
+      }
+      .text-s,
+      .text-s * {
+        font-size: .975vw;
+      }
+      .text-marquee,
+      .text-marquee * {
+        font-size: 2.2vw;
+      }
+      .text-btn, 
+      .text-btn *{
+        font-size: 1.66vw;
+      }
+      .link-1,
+      .link-1 * {
+        font-size: 1.1vw;
+      }
+  }
+  @media(max-width:1199px) and (min-width:992px) {
+      main._master ._full>._header ._title {
+        font-size: 5.56vw;
+      }
+      main._master ._subtitle,
+      ._item ._detail {
+        font-size: 1.12vw;
+      }
+      main._master ._full._1 .row>._2 ._body._2>._flex ._item{
+        margin-bottom:1rem;
+      }
+      body .form-floating>.form-control, 
+      body .form-floating>.form-control-plaintext {
+        padding: 0.95vw 0;
+        font-size:0.95vw;
+      }
+      body .form-floating>label {
+        padding: 0.95vw 0;
+        font-size:0.95vw;
+      }
+      .title-1,
+      .title-1 *{
+        font-size: 7vw;
+      }
+      .title-2,
+      .title-2 * {
+        font-size: 6vw;
+      }
+      .title-3,
+      .title-3 *{
+        font-size: 4.13vw;
+      }
+      .title-4,
+      .title-4 * {
+        font-size: 3.2vw;
+      }
+      .title-5,
+      .title-5 *,
+      .btn-i,
+      .btn-i *{
+        font-size: 2.66vw;
+      }
+      .title-6,
+      .title-6 * {
+        font-size: 2.38vw;
+      }
+      section._header._1 .in-header>div>._flex ._second ._icons ._icon img{
+        width: 3vw;
+        height: 3vw;
+        object-fit: contain;
+      }
+      ._badge,
+      .text-l,
+      .text-l * {
+        font-size: 2vw;
+      }
+      .text-m,
+      .text-m * {
+        font-size: 1.7vw;
+      }
+      .text-s,
+      .text-s * {
+        font-size: 1.3vw;
+      }
+      .text-marquee,
+      .text-marquee * {
+        font-size: 2vw;
+      }
+      .text-btn, 
+      .text-btn *{
+        font-size: 2.66vw;
+      }
+      .link-1,
+      .link-1 * {
+        font-size: 1.7vw;
+      }
+  }
+  @media(min-width:992px){
+      .btn-i {
+        padding: 0.8vw 1.7vw;
+        border-radius: 5vw;
+      }
+      main._master.l-section.height_medium {
+          padding: 1.6vw;
+      }
+      main._master ._subtitle{
+          padding: 1% 0 3%;
+      }
+    
+      .btn-i>._real {
+        display: flex;
+        align-items: center;
+        padding: 1.1vw 1.6vw;
+        border-radius: 99rem;
+        z-index: 1;
+        border: 0.15vw solid;
+        transform: translateX(0.2vw) translateY(-0.4vw);
+      }
+  }
+  @media(max-width:991px){
+      .btn-i {
+        padding: 0.8vw 1.7vw;
+        border-radius: 5vw;
+      }
+      main._master.l-section.height_medium {
+          padding: 1rem;
+      }
+      main._master ._subtitle{
+          padding: 1% 0 1%;
+      }
+      ._full ._body._2 ._item {
+          margin-bottom: 0;
+      }
+  }
+  @media(max-width:991px) and (min-width:768px) {
+      main._master ._full>._header ._title {
+        font-size: 5.56vw;
+      }
+      main._master ._subtitle,
+      ._item ._detail {
+        font-size: 1rem;
+      }
+      main._master ._full._1 .row>._2 ._body._2>._flex ._item{
+        margin-bottom:1rem;
+      }
+      body .form-floating>.form-control, 
+      body .form-floating>.form-control-plaintext {
+        padding: 0.95vw 0;
+        font-size:0.95vw;
+      }
+      body .form-floating>label {
+        padding: 0.95vw 0;
+        font-size:0.95vw;
+      }
+      .title-1,
+      .title-1 *{
+        font-size: 8vw;
+      }
+      .title-2,
+      .title-2 * {
+        font-size: 6vw;
+      }
+      .title-3,
+      .title-3 *{
+        font-size: 7vw;
+      }
+      .title-4,
+      .title-4 * {
+        font-size: 5.2vw;
+      }
+      .title-5,
+      .title-5 *,
+      .btn-i,
+      .btn-i *{
+        font-size: 3.66vw;
+      }
+      .title-6,
+      .title-6 * {
+        font-size: 3.38vw;
+      }
+      section._header._1 .in-header>div>._flex ._second ._icons ._icon img{
+        width: 7vw;
+        height: 7vw;
+        object-fit: contain;
+      }
+      ._badge,
+      .text-l,
+      .text-l * {
+        font-size: 2.8vw;
+      }
+      .text-m,
+      .text-m * {
+        font-size: 2.4vw;
+      }
+      .text-s,
+      .text-s * {
+        font-size: 2vw;
+      }
+      .text-marquee,
+      .text-marquee * {
+        font-size: 2.4vw;
+      }
+      .text-btn, 
+      .text-btn *{
+        font-size: 3.66vw;
+      }
+      .link-1,
+      .link-1 * {
+        font-size: 2.4vw;
+      }
+      
+  }
+  @media(max-width:767px) and (min-width:576px) {
+      main._master ._full>._header ._title {
+        font-size: 5.56vw;
+      }
+      main._master ._subtitle,
+      ._item ._detail {
+        font-size: 1rem;
+      }
+      main._master ._full._1 .row>._2 ._body._2>._flex ._item{
+        margin-bottom:1rem;
+      }
+      body .form-floating>.form-control, 
+      body .form-floating>.form-control-plaintext {
+        padding: 0.95vw 0;
+        font-size:0.95vw;
+      }
+      body .form-floating>label {
+        padding: 0.95vw 0;
+        font-size:0.95vw;
+      }
+      .title-1,
+      .title-1 *{
+        font-size: 16.8vw;
+      }
+      .title-2,
+      .title-2 * {
+        font-size: 12.3vw;
+      }
+      .title-3,
+      .title-3 *{
+        font-size: 9vw;
+      }
+      .title-4,
+      .title-4 * {
+        font-size: 7.8vw;
+      }
+      .title-5,
+      .title-5 *,
+      .btn-i,
+      .btn-i *{
+        font-size: 6.1vw;
+      }
+      .title-6,
+      .title-6 * {
+        font-size: 5.5vw;
+      }
+      section._header._1 .in-header>div>._flex ._prefirst{
+        width:11vw;
+      }
+      section._header._1 .in-header>div>._flex ._second ._icons ._icon img{
+        width: 5vw;
+        height: 5vw;
+        object-fit: contain;
+      }
+      ._badge,
+      .text-l,
+      .text-l * {
+        font-size: 5.2vw;
+      }
+      .text-m,
+      .text-m * {
+        font-size: 4.45vw;
+      }
+      .text-s,
+      .text-s * {
+        font-size: 3.9vw;
+      }
+      .text-marquee,
+      .text-marquee * {
+        font-size: 7.7vw;
+      }
+      .text-btn, 
+      .text-btn *{
+        font-size: 6.1vw;
+      }
+      .link-1,
+      .link-1 * {
+        font-size: 4.45vw;
+      }
+      ._full ._header {
+          margin-bottom: 1rem;
+      }
+      
+      ._full ._body {
+          padding-top: 1rem;
+          display: flex;
+          flex-wrap: wrap;
+          grid-gap: 1rem;
+      }
+      ._full._2>.row>._1 ._item{
+          width:100%;
+      }
+      ._full._2>.row>._2 ._flex ._item{
+          width:100%;
+      }
+      ._body:not(._2) ._item {
+          margin-bottom: 3vw;
+      }
+      ._full>.row>._2 ._flex {
+          grid-gap: 1%;
+          flex-wrap: wrap;
+      }
+      ._full._1 .row>._1 ._item._1 {
+          width: 90%;
+      }
+      ._full._1 .row>._1 ._item._2 {
+          width: 90%;
+      }
+      ._full._1 .row>._1 ._item._3 {
+          width: 90%;
+      }
+      ._full._1 .row>._1 ._item._4 {
+          width: 90%;
+      }
+      ._full._1 .row>._1 ._item._5 {
+          width: 90%;
+      }
+      ._full._2 .row>._2>._body ._flex ._item ._in > div {
+          display: flex;
+          flex-direction: column;
+          grid-gap: 0.6rem;
+      }
+      ._full._2 .row>._2>._body ._flex:not(._4) ._item ._in{
+          width:90%;
+      }
+      ._full._2 .row>._2>._body ._flex._4 ._item {
+          width: 90%;
+      }
+
+  }
+  @media(max-width:575px) {
+      main._master ._full>._header ._title {
+        font-size: 5.56vw;
+      }
+      main._master ._subtitle,
+      ._item ._detail {
+        font-size: 1rem;
+      }
+      main._master ._full._1 .row>._2 ._body._2>._flex ._item{
+        margin-bottom:1rem;
+      }
+      body .form-floating>.form-control, 
+      body .form-floating>.form-control-plaintext {
+        padding: 0.95vw 0;
+        font-size:0.95vw;
+      }
+      body .form-floating>label {
+        padding: 0.95vw 0;
+        font-size:0.95vw;
+      }
+      .title-1,
+      .title-1 *{
+        font-size: 16.8vw;
+      }
+      .title-2,
+      .title-2 * {
+        font-size: 13.3vw;
+      }
+      .title-3,
+      .title-3 *{
+        font-size: 10vw;
+      }
+      .title-4,
+      .title-4 * {
+        font-size: 7.8vw;
+      }
+      .title-5,
+      .title-5 *,
+      .btn-i,
+      .btn-i *{
+        font-size: 6.1vw;
+      }
+      .title-6,
+      .title-6 * {
+        font-size: 5.5vw;
+      }
+      section._header._1 .in-header>div>._flex ._prefirst{
+        width:11vw;
+      }
+      section._header._1 .in-header>div>._flex ._second ._icons ._icon img{
+        width: 5vw;
+        height: 5vw;
+        object-fit: contain;
+      }
+      ._badge,
+      .text-l,
+      .text-l * {
+        font-size: 5.2vw;
+      }
+      .text-m,
+      .text-m * {
+        font-size: 4.45vw;
+      }
+      .text-s,
+      .text-s * {
+        font-size: 3.9vw;
+      }
+      .text-marquee,
+      .text-marquee * {
+        font-size: 7.7vw;
+      }
+      .text-btn, 
+      .text-btn *{
+        font-size: 6.1vw;
+      }
+      .link-1,
+      .link-1 * {
+        font-size: 4.45vw;
+      }
+      ._full ._header {
+          margin-bottom: 1rem;
+      }
+      
+      ._full ._body {
+          padding-top: 1rem;
+          display: flex;
+          flex-wrap: wrap;
+          grid-gap: 1rem;
+      }
+      ._full._2>.row>._1 ._item{
+          width:100%;
+      }
+      ._full._2>.row>._2 ._flex ._item{
+          width:100%;
+      }
+      ._body:not(._2) ._item {
+          margin-bottom: 3vw;
+      }
+      ._full>.row>._2 ._flex {
+          grid-gap: 1%;
+          flex-wrap: wrap;
+      }
+      ._full._1 .row>._1 ._item._1 {
+          width: 90%;
+      }
+      ._full._1 .row>._1 ._item._2 {
+          width: 90%;
+      }
+      ._full._1 .row>._1 ._item._3 {
+          width: 90%;
+      }
+      ._full._1 .row>._1 ._item._4 {
+          width: 90%;
+      }
+      ._full._1 .row>._1 ._item._5 {
+          width: 90%;
+      }
+      ._full._2 .row>._2>._body ._flex ._item ._in > div {
+          display: flex;
+          flex-direction: column;
+          grid-gap: 0.6rem;
+      }
+      ._full._2 .row>._2>._body ._flex:not(._4) ._item ._in{
+          width:90%;
+      }
+      ._full._2 .row>._2>._body ._flex._4 ._item {
+          width: 90%;
+      }
+
+
+  }
+/* END RESPONSIVE */

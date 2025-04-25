@@ -1,0 +1,98 @@
+<section class="_products _i" style="background-color: {{ section.settings.background_color }};">
+  <span id="trigger_products_1" class="_trigger"></span>
+  <span id="trigger_products_2" class="_trigger"></span>
+  <span id="trigger_products_3" class="_trigger"></span>
+  <span id="trigger_products_4" class="_trigger"></span>
+  <span id="trigger_products_5" class="_trigger"></span>
+  <figure class="_detail _1">
+    <figure class="_sticker _1">
+      <img src="https://cdn.shopify.com/s/files/1/0619/3971/2098/files/sticker-2.svg?v=1744740420">
+    </figure>
+    <figure class="_lines _1">
+      <img src="https://cdn.shopify.com/s/files/1/0619/3971/2098/files/lines-blue.svg?v=1744740515">
+    </figure>
+  </figure>
+  <figure class="_detail _2">
+    <figure class="_sticker _1">
+      <img src="https://cdn.shopify.com/s/files/1/0619/3971/2098/files/sticker-3.svg?v=1744740515">
+    </figure>
+    <figure class="_lines _1">
+      <img src="https://cdn.shopify.com/s/files/1/0619/3971/2098/files/lines-blue.svg?v=1744740515">
+    </figure>
+  </figure>
+  <div class="_content">
+    <div class="_inside _1">
+      <div class="_container full-2">
+        <div class="_heading">
+          <div class="title-2">
+            <h2><span data-splitting>{{ section.settings.heading }}</span></h2>
+          </div>
+        </div>
+        <div class="_boding">  
+          <div class="in-boding">
+            <div class="splide splide-products _pdps _1">
+              <div class="splide__track">
+                <div class="splide__list">
+                  {% assign products = collections.shop.products %}
+                  {% for product in products %}
+                    <div class="splide__slide">
+                      {% render 'pdp', product: product, forloop: forloop %}
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    new Splide('.splide-products', {
+      type: 'slide',
+      gap: '2vw',
+      perPage: 4,
+      perMove: 1,
+      arrows: false,
+      pagination: false,
+      padding: {left: "10%", right: "10%"},
+      breakpoints: {
+        991: {
+          gap: '2vw',
+          perPage: 2,
+          arrows: false,
+          padding: {left: "0", right: "20%"},
+        },
+        767: {
+          gap: '5vw',
+          perPage: 1,
+          padding: {left: "0", right: "20%"},
+        }
+      }
+    }).mount();
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "Products",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background color",
+        "default": "#fff7eb"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Shop Our Products!"
+      }
+    ]
+  }
+{% endschema %}
