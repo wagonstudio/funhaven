@@ -1,5 +1,4 @@
 # 🍄 Funhaven by Wagon Studio
-
 This repository contains the custom **Shopify theme** developed for the project [Funhaven](https://funhaven.com).
 
 > ✨ Designed and developed with a strong focus on animation, performance, and a seamless visual experience for a bold, modern brand.
@@ -174,6 +173,94 @@ This ensures compatibility with A11Y (accessibility) standards. In cases where a
 - Buttons follow the `.btn-i` class with responsive full-width behavior
 
 
+### 📌 Layout and Section Structure
+#### 🏠 Section Types
+Each section in the theme follows a basic structure, which can be identified by specific class names like ._home, ._blog, ._shop, and ._product. The basic structure for these sections is as follows:
+
+
+```html
+Copiar
+<section class="_[home|blog|shop|product]">
+  <div class="_head">
+    <div class="_heading">
+      <!-- Title or other heading content -->
+    </div>
+  </div>
+  
+  <div class="_body">
+    <div class="_boding">
+      <!-- Main content, often with images or text -->
+    </div>
+  </div>
+</section>
+```
+
+**._home:** Used for the homepage section, containing general content, animations, and marketing messages.
+
+**._blog:** A section for blog-related pages, typically containing articles or blog entries.
+
+**._shop:** A section dedicated to showcasing products or collections in the store.
+
+**._product:** Used to display individual product details, including images, pricing, and descriptions.
+
+### 📐 Flexbox Layouts
+The .flex class is used within sections to create flexible and responsive layouts, especially for grids and content organization. It typically includes settings for item spacing, alignment, and positioning.
+
+
+```css
+._flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+```
+
+### Important Notes:
+
+The .flex class uses display: flex to enable flexible box layouts.
+The flex-wrap: wrap ensures that the items will wrap onto the next line when the container is too narrow.
+
+The gap property is used to define the spacing between items inside the .flex container, and this value may vary depending on the viewport width (breakpoints). For instance:
+
+On larger screens (e.g., min-width: 1200px), the gap could be set to 1vw.
+
+For medium-sized screens (e.g., min-width: 992px), the gap could increase to 2vw.
+
+These variations ensure the layout adapts based on screen size, maintaining visual balance across devices.
+
+
+### 🧩 Example Usage
+Grid Layout: Inside a .body section, you might use .flex to create a responsive grid of products or images.
+
+
+```html
+<div class="_body">
+  <div class="_flex">
+    <div class="product-item">Product 1</div>
+    <div class="product-item">Product 2</div>
+    <div class="product-item">Product 3</div>
+  </div>
+</div>
+```
+Flexible Item Alignment: You can adjust the alignment of items inside a .flex container:
+
+
+```css
+._flex {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: flex-start; /* Align items to the top */
+}
+```
+
+### 📦 Container Layouts
+In addition to the .flex layouts, the theme uses .container classes to manage the width and positioning of elements within sections. The .container ensures consistent margins and spacing across devices.
+
+These containers ensure that your layout is well-structured and responsive, adapting seamlessly to different screen sizes.
+
+
+
 ---
 
 ## 🔧 Technologies Used
@@ -228,6 +315,5 @@ This theme is fully structured for Shopify and can be installed directly via the
 ---
 
 ## ⚠️ License
-
 This project is private and exclusive to the Funhaven brand.  
 For collaborations or theme licensing inquiries, contact us via [Wagon Studio](https://wagondesignstudio.com).
