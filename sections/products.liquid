@@ -1,0 +1,128 @@
+{% comment %}
+  Shopify Section: Products
+  Corrects horizontal alignment of product title, description, and button to be centered.
+  Applies unique colors to each product's title and description:
+  - Product 1: #FF7F4D
+  - Product 2: #3973C6
+  - Product 3: #208961
+  - Product 4: #000
+  - Cycles through colors for additional products.
+  Preserves all other design elements as provided.
+{% endcomment %}
+
+<section class="_products _i" style="background-color: {{ section.settings.background_color }};">
+  <span id="trigger_products_1" class="_trigger"></span>
+  <span id="trigger_products_2" class="_trigger"></span>
+  <span id="trigger_products_3" class="_trigger"></span>
+  <span id="trigger_products_4" class="_trigger"></span>
+  <span id="trigger_products_5" class="_trigger"></span>
+
+  <div class="products-home-img-left-right-main"> 
+    <div class="products-home-img-left"> 
+      <img src="https://cdn.shopify.com/s/files/1/0658/4474/0231/files/products-home-img-left.png?v=1746869195" alt="Left decorative image">
+    </div>
+    <div class="products-home-img-right"> 
+      <img src="https://cdn.shopify.com/s/files/1/0658/4474/0231/files/products-home-img-right.png?v=1746869195" alt="Right decorative image">
+    </div>
+  </div>
+
+  <div class="_content">
+    <div class="_inside _1">
+      <div class="_container full-2">
+        <div class="_heading">
+          <div class="title-2 text-center text-persimmon mb-5">
+            <h2><span data-splitting>{{ section.settings.heading }}</span></h2>
+          </div>
+        </div>
+        <div class="_boding">  
+          <div class="in-boding">
+            <div class="splide splide-products _pdps _1 {% if template.name == 'product' %}template-product{% endif %}">
+              <div class="splide__track">
+                <div class="splide__list">
+                  {% assign products = collections.all.products %}
+                  {% for loop_product in products %}
+                    {% if template.name != 'product' or loop_product.id != product.id %}
+                      <div class="splide__slide">
+                        <a href="{{ loop_product.url }}" class="product-link">
+                          {% render 'pdp', product: loop_product, forloop: forloop %}
+                          <div class="product-description">
+                            {% if loop_product.metafields.custom.short_description != blank %}
+                              {{ loop_product.metafields.custom.short_description }}
+                            {% else %}
+                              {{ loop_product.description | strip_html | truncatewords: 30 }}
+                            {% endif %}
+                          </div>
+                        </a>
+                        <div class="button-container"></div>
+                      </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const splideEl = document.querySelector('.splide-products');
+  
+    if (!splideEl) return;
+  
+    const isProductPage = splideEl.classList.contains('template-product');
+  
+    const splide = new Splide(splideEl, {
+      type: 'slide',
+      gap: '2vw',
+      perPage: isProductPage ? 3 : 4,
+      perMove: 1,
+      arrows: false,
+      pagination: false,
+      focus: 'center',
+      padding: { left: '0', right: '0' },
+      breakpoints: {
+        1199: {
+          gap: '2vw',
+          perPage: 2,
+          arrows: false,
+          padding: { left: '0', right: '0' }
+        },
+        767: {
+          gap: '5vw',
+          perPage: 1,
+          padding: { left: '0', right: '35%' }
+        }
+      }
+    }).mount();
+  });
+
+</script>
+
+{% schema %}
+  {
+    "name": "Products",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background color",
+        "default": "#fff7eb"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Shop Our Products!"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Products"
+      }
+    ]
+  }
+{% endschema %}

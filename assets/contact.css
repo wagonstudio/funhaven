@@ -1,0 +1,353 @@
+/* I */
+  section._contact._1{
+    background-color: #3973c6;
+    overflow: hidden;
+  }
+  section._contact._1 ._customer {
+    position: relative;
+    padding: 5vw 0;
+  }
+  section._contact._1 ._customer ._cookies img {
+    width: 100%;
+    margin-left: auto;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    object-position: bottom;
+  }
+  section._contact._1 ._customer .funnies>._flex {
+    grid-gap: 2vw;
+  }
+  section._contact._1 ._customer .funnies aside.message-1 ._data {
+    color: #3973C6;
+    transform: rotate(11deg);
+  }
+  section._contact._1 ._customer .full-funnies {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+  section._contact._1 ._customer .full-1 {
+    position: relative;
+    z-index: 3;
+  }
+  section._contact._1 ._wholesale {
+    position: relative;
+    padding: 10vw 0 0;
+  }
+  section._contact._1 ._wholesale ._bg{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+  }
+  section._contact._1 ._wholesale>div {
+    position: relative;
+    z-index: 2;
+  }
+  section._contact._1 ._customer .full-1 ._heading .in-heading {
+    width: 90%;
+  }
+  section._contact._1 ._wholesale ._heading .in-heading {
+    width: 100%;
+    color: #208961;
+  }
+  section._contact._1 ._wholesale ._heading .in-heading .info_email {
+    margin-top: 3vw;
+  }
+  section._contact._1 ._wholesale ._bg svg {
+    width: 100%;
+    height: 100%;
+  }
+/* END I */
+
+@media(min-width:1200px){
+  section._contact._1 ._customer .full-1 ._heading {
+    width: calc(50% - 0.5vw);
+    padding-bottom:10vw;
+  }
+  section._contact._1 ._customer .full-1 ._boding {
+    width: calc(50% - 0.5vw);
+  }
+  section._contact._1 ._wholesale ._heading {
+    width: calc(50% - 1vw);
+  }
+  section._contact._1 ._wholesale ._boding {
+    width: calc(50% - 1vw);
+  }
+  section._contact._1 .heading ._heading,
+  div#contact-sec2-heading {
+    padding: 0 0 10%;
+  }
+  section._contact._1 ._customer .full-1 ._boding .in-boding {
+    width: 80%;
+    margin-left: auto;
+  }
+  section._contact._1 ._wholesale ._boding .in-boding {
+    width: 80%;
+    margin-left: auto;
+  }
+  section._contact._1 ._customer ._cookies {
+    position: absolute;
+    z-index: 1;
+    right: -23%;
+    top: 0;
+    width: 100%; 
+    height:120%;
+    overflow: hidden;
+  }
+  section._contact._1 ._customer .funnies {
+    position: relative;
+    width: max-content;
+    display: block;
+    bottom: -3vw;
+  }
+  section._contact._1 ._customer .funnies aside.message-1 {
+    position: absolute;
+    bottom: 120%;
+    right: 0;
+  }
+}
+@media(max-width:1199px) and (min-width:992px){
+  section._contact._1 ._customer .full-1 ._heading {
+    width: calc(50% - 0.5vw);
+    padding-bottom:10vw;
+  }
+  section._contact._1 ._customer .full-1 ._boding {
+    width: calc(50% - 0.5vw);
+  }
+  section._contact._1 ._wholesale ._heading {
+    width: calc(50% - 1vw);
+  }
+  section._contact._1 ._wholesale ._boding {
+    width: calc(50% - 1vw);
+  }
+  section._contact._1 .heading ._heading,
+  div#contact-sec2-heading {
+    padding: 0 5%;
+  }
+  section._contact._1 ._customer .full-1 ._boding .in-boding {
+    width: 80%;
+    margin-left: auto;
+  }
+  section._contact._1 ._wholesale ._boding .in-boding {
+    width: 80%;
+    margin-left: auto;
+  }
+  section._contact._1 ._customer ._cookies {
+    position: absolute;
+    z-index: 1;
+    right: -23%;
+    top: 0;
+    width: 100%; 
+    height:120%;
+    overflow: hidden;
+  }
+  section._contact._1 ._customer .funnies {
+    position: relative;
+    width: max-content;
+    display: block;
+    bottom: -3vw;
+  }
+  section._contact._1 ._customer .funnies aside.message-1 {
+    position: absolute;
+    bottom: 120%;
+    right: 0;
+  }
+}
+@media(max-width:991px) and (min-width:768px){
+  section._contact._1 ._customer .full-1 ._heading {
+    width: 100%;
+    padding-bottom:5vw;
+  }
+  section._contact._1 ._customer .full-1 ._boding {
+    width: 100%;
+  }
+  section._contact._1 ._wholesale ._heading ,
+  section._contact._1 ._wholesale ._boding {
+    width: 100%;
+  }
+  section._contact._1 .heading ._heading,
+  div#contact-sec2-heading {
+    padding: 0 5%;
+  }
+  section._contact._1 ._customer .full-1 ._boding .in-boding {
+    width: 100%;
+    padding: 0 5%;
+  }
+  section._contact._1 ._customer{
+    padding: 5vw 0 20vw;
+  }
+  section._contact._1 ._customer ._cookies {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    width: 70%;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+  }
+  section._contact._1 ._customer .funnies {
+    position: relative;
+    width: max-content;
+    display: block;
+    bottom: -3vw;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+  }
+  section._contact._1 ._customer .funnies aside.message-1 {
+    position: absolute;
+    bottom: 120%;
+    left: 35%;
+  }
+  section._contact._1 ._wholesale ._boding .in-boding {
+    width: 100%;
+    padding: 0 5%;
+  }
+  section._contact._1 ._wholesale .info_email {
+    width: 100%;
+    padding: 0 5%;
+  }
+}
+@media(min-width:768px){
+  section._contact._1 ._customer .funnies .fun._jumping {
+    width: 6vw;
+    height: max-content;
+  }
+  section._contact._1 ._customer .funnies figure.fun._greeting {
+    width: 8vw;
+    height: max-content;
+  }
+}
+@media(max-width:767px){
+  section._contact._1 ._customer .funnies .fun._jumping {
+    width: 12vw;
+    height: max-content;
+  }
+  section._contact._1 ._customer .funnies figure.fun._greeting {
+    width: 15vw;
+    height: max-content;
+  }
+}
+@media(max-width:767px) and (min-width:576px){
+  section._contact._1 ._customer .full-funnies{
+    bottom:-5vw;
+  }
+  section._contact._1 ._customer .full-1 ._heading {
+    width: 100%;
+    padding-bottom:5vw;
+  }
+  section._contact._1 ._customer .full-1 ._boding {
+    width: 100%;
+  }
+  section._contact._1 ._wholesale ._heading ,
+  section._contact._1 ._wholesale ._boding {
+    width: 100%;
+  }
+  section._contact._1 .heading ._heading,
+  div#contact-sec2-heading {
+    padding: 0 5%;
+  }
+  section._contact._1 ._customer .full-1 ._boding .in-boding {
+    width: 100%;
+  }
+  section._contact._1 ._customer{
+    padding: 5vw 0 35vw;
+  }
+  section._contact._1 ._customer ._cookies {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    width: 132%;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+  }
+  section._contact._1 ._customer .funnies {
+    position: relative;
+    width: max-content;
+    display: block;
+    bottom: -3vw;
+    right: 0;
+    left: -10%;
+    margin-left: auto;
+  }
+  section._contact._1 ._customer .funnies aside.message-1 {
+    position: absolute;
+    bottom: 120%;
+    left: 45%;
+    right: -23%;
+  }
+  section._contact._1 ._wholesale ._boding .in-boding {
+    width: 100%;
+    padding: 0 5% 11vw;
+  }
+  section._contact._1 ._wholesale .info_email {
+    width: 100%;
+    padding: 0 5%;
+  }
+}
+@media(max-width:575px){
+  section._contact._1 ._customer .full-funnies{
+    bottom:-5vw;
+  }
+  section._contact._1 ._customer .full-1 ._heading {
+    width: 100%;
+    padding-bottom:5vw;
+  }
+  section._contact._1 ._customer .full-1 ._boding {
+    width: 100%;
+  }
+  section._contact._1 ._wholesale ._heading ,
+  section._contact._1 ._wholesale ._boding {
+    width: 100%;
+  }
+  section._contact._1 .heading ._heading,
+  div#contact-sec2-heading {
+    padding: 0 5%;
+  }
+  section._contact._1 ._customer .full-1 ._boding .in-boding {
+    width: 100%;
+  }
+  section._contact._1 ._customer{
+    padding: 5vw 0 35vw;
+  }
+  section._contact._1 ._customer ._cookies {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    width: 130%;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+  }
+  section._contact._1 ._customer .funnies {
+    position: relative;
+    width: max-content;
+    display: block;
+    bottom: -3vw;
+    right: 0;
+    left: -10%;
+    margin-left: auto;
+  }
+  section._contact._1 ._customer .funnies aside.message-1 {
+    position: absolute;
+    bottom: 120%;
+    left: 45%;
+    right: -23%;
+  }
+  section._contact._1 ._wholesale ._boding .in-boding {
+    width: 100%;
+    padding: 0 5% 11vw;
+  }
+  section._contact._1 ._wholesale .info_email {
+    width: 100%;
+    padding: 0 5%;
+  }
+}

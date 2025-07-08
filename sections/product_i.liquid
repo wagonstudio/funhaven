@@ -1,0 +1,573 @@
+<section class="_product _i" style="background-color: {{ section.settings.background_color }};">
+
+  <form data-cart-submit class="product-form _container full-1" id="AddToCartForm">
+    <div class="_flex">
+      <div class="_first d-none d-lg-flex">
+        <div class="_content">
+          <div class="_media ">
+            <div id="thumbnail-slider" class="splide thumbnail-slider">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  {% for media in product.media %}
+                    {% if media.media_type == 'image' %}
+                      <li class="splide__slide">
+                        <img src="{{ media.preview_image | img_url: '100x100' }}" alt="{{ media.alt | escape }}">
+                      </li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+            <div id="main-slider" class="splide main-slider">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  {% for media in product.media %}
+                    {% if media.media_type == 'image' %}
+                      <li class="splide__slide">
+                        <img src="{{ media.preview_image | img_url: '2024x2024' }}" alt="{{ media.alt | escape }}">
+                      </li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+          <aside class="_bg">
+              <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 630 666" fill="none">
+                <path d="M625.235 653.541C625.039 660.647 621.172 666.205 616.5 665.994L518.792 661.562C387.912 655.652 257.052 649.672 126.172 649.531C88.1527 649.531 50.0547 649.953 12.2118 643.973C6.69635 643.058 2.39781 636.093 2.24079 627.58C0.886454 564.119 0.160216 500.658 0.0228202 437.267C-0.232344 316.184 1.65195 195.172 5.69532 74.3002C6.24491 57.6962 2.63335 10.0652 12.6044 2.18531C18.7087 -2.5989 34.4504 1.97424 41.4772 1.90389C51.2716 1.90389 61.066 1.83353 70.8604 1.76318L179.816 1.12997C212.732 0.918903 266.611 2.60745 299.507 5.63275C331.933 8.58771 366.694 6.47703 398.747 8.16557C432.409 9.99483 462.617 16.749 496.259 14.9197C537.399 12.6684 578.677 14.4273 619.739 20.1964C623.822 20.7593 627.021 26.036 627.139 32.2977C631.516 239.355 630.868 446.554 625.215 653.4L625.235 653.541Z" fill="#82D1A6"/>
+              </svg>
+          </aside>
+        </div>
+      </div>
+      <div class="_second">
+        <div class="_information">
+          <h1 class="product-title title-2 d-md-none d-lg-block">{{ product.title }}</h1>
+          <h2 class="product-title title-1 d-none d-md-block d-lg-none">{{ product.title }}</h2>
+          <div class="product-description title-5 _rgl">{{ product.description }}</div>
+          <aside class="d-lg-none">
+            <div class="_content">
+              <div class="_media ">
+                <div id="thumbnail-slider-2" class="splide thumbnail-slider">
+                  <div class="splide__track">
+                    <ul class="splide__list">
+                      {% for media in product.media %}
+                        {% if media.media_type == 'image' %}
+                          <li class="splide__slide">
+                            <img src="{{ media.preview_image | img_url: '100x100' }}" alt="{{ media.alt | escape }}">
+                          </li>
+                        {% endif %}
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </div>
+                <div id="main-slider-2" class="splide main-slider">
+                  <div class="splide__track">
+                    <ul class="splide__list">
+                      {% for media in product.media %}
+                        {% if media.media_type == 'image' %}
+                          <li class="splide__slide">
+                            <img src="{{ media.preview_image | img_url: '2024x2024' }}" alt="{{ media.alt | escape }}">
+                          </li>
+                        {% endif %}
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <aside class="_bg">
+                  <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 630 666" fill="none">
+                    <path d="M625.235 653.541C625.039 660.647 621.172 666.205 616.5 665.994L518.792 661.562C387.912 655.652 257.052 649.672 126.172 649.531C88.1527 649.531 50.0547 649.953 12.2118 643.973C6.69635 643.058 2.39781 636.093 2.24079 627.58C0.886454 564.119 0.160216 500.658 0.0228202 437.267C-0.232344 316.184 1.65195 195.172 5.69532 74.3002C6.24491 57.6962 2.63335 10.0652 12.6044 2.18531C18.7087 -2.5989 34.4504 1.97424 41.4772 1.90389C51.2716 1.90389 61.066 1.83353 70.8604 1.76318L179.816 1.12997C212.732 0.918903 266.611 2.60745 299.507 5.63275C331.933 8.58771 366.694 6.47703 398.747 8.16557C432.409 9.99483 462.617 16.749 496.259 14.9197C537.399 12.6684 578.677 14.4273 619.739 20.1964C623.822 20.7593 627.021 26.036 627.139 32.2977C631.516 239.355 630.868 446.554 625.215 653.4L625.235 653.541Z" fill="#82D1A6"/>
+                  </svg>
+              </aside>
+            </div>
+          </aside>
+                      
+          <div class="_lists">
+            <div>
+              {{ product.metafields.custom.list_i | metafield_tag }}
+            </div>
+            <div>
+              {{ product.metafields.custom.list_ii | metafield_tag }}
+            </div>
+          </div>
+        
+          <div class="_quantity _1">
+            {% if product.variants.size > 1 %}
+              {% assign selected_id = product.selected_or_first_available_variant.id %}
+              {% assign option_name = product.options_with_values[0].name %}
+          
+              <div class="radio-group">
+                {% for variant in product.variants %}
+                  <label class="_radio btn-radio {% if variant.id == selected_id %}on{% endif %}">
+                    <input 
+                      type="radio" 
+                      name="id" 
+                      value="{{ variant.id }}"
+                      data-price-raw="{{ variant.price }}"
+                      data-inventory="{{ variant.inventory_quantity }}"
+                      {% if variant.id == selected_id %}checked{% endif %}
+                      {% unless variant.available %}disabled{% endunless %}
+                    >
+                    <span>{{ variant.title }}</span>
+                  </label>
+                {% endfor %}
+              </div>
+          
+              <label class="text-2 _bld">{{ option_name }}</label>
+            
+            {% else %}
+              <input 
+                type="hidden" 
+                name="id" 
+                id="SingleVariantInput" 
+                value="{{ product.variants.first.id }}" 
+                data-price-raw="{{ product.variants.first.price }}" 
+                data-inventory="{{ product.variants.first.inventory_quantity }}">
+            {% endif %}
+          </div>
+          <div class="_price title-5 ">
+            <span class="symbol">$</span>
+            <div class="price price-value" id="ProductPriceValue">
+              {{ product.selected_or_first_available_variant.price | money_without_currency }}
+            </div>
+            <span class="currency">{{ cart.currency.iso_code }}</span>
+          </div>
+          <div class="_actions ">
+            <div class="quantity-wrapper title-6">
+              <button type="button" class="qty-btn" data-action="minus">−</button>
+              <input class="quantity-input" type="text" name="quantity" id="quantityInput" value="1" min="1" />
+              <button type="button" class="qty-btn" data-action="plus">+</button>
+            </div>
+            <div class="_add">
+              <button class="_btn btn-i _4 add-to-cart _fullwidth testrr54cart" type="submit">
+                <span class="_info text-btn">Add to cart</span>
+              </button>
+            </div>
+          </div>
+          
+          <div class="product-sku d-none " id="ProductSKU">
+            SKU: {{ product.selected_or_first_available_variant.sku }}
+          </div>
+          <div class="stock-info stock-value d-none" id="StockInfo"></div>
+          <input type="hidden" name="id" id="SelectedVariantId" value="{{ product.selected_or_first_available_variant.id }}">
+          
+          <div id="Main-ingradiewnt-0" class="_ingredients">
+            <div class="accordion" id="accordionIngredients">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                    <span class="_1 title-4">Ingredients</span>
+                    <span class="_2"><i class="bi bi-caret-down-fill"></i></span>
+                  </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#accordionIngredients">
+                  <div class="accordion-body">
+                    {{ product.metafields.custom.ingredients | metafield_tag }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </form>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const variantSelects = document.querySelectorAll(".variant-select");
+    const radioButtons = document.querySelectorAll('input[type="radio"][name="id"]');
+    const singleVariantInputs = document.querySelectorAll("#SingleVariantInput");
+    const hiddenVariantInputs = document.querySelectorAll("#SelectedVariantId");
+    const quantityInputs = document.querySelectorAll(".quantity-input");
+    const plusBtns = document.querySelectorAll('.qty-btn[data-action="plus"]');
+    const minusBtns = document.querySelectorAll('.qty-btn[data-action="minus"]');
+    const priceDisplays = document.querySelectorAll(".price-value");
+    const stockDisplays = document.querySelectorAll(".stock-value");
+    const addToCartBtns = document.querySelectorAll(".add-to-cart");
+
+    function formatMoney(cents) {
+      return (cents / 100).toLocaleString("en-US", {
+        style: "currency",
+        currency: "USD",
+      });
+    }
+
+    function getCurrentVariant() {
+      if (radioButtons.length) {
+        const checkedRadio = document.querySelector('input[type="radio"][name="id"]:checked');
+        if (checkedRadio) {
+          return {
+            id: checkedRadio.value,
+            priceRaw: parseInt(checkedRadio.dataset.priceRaw || "0"),
+            stock: parseInt(checkedRadio.dataset.inventory || "0")
+          };
+        }
+      }
+
+      if (variantSelects.length) {
+        const selected = Array.from(variantSelects).find(select => select.value);
+        const option = selected.options[selected.selectedIndex];
+        return {
+          id: option.value,
+          priceRaw: parseInt(option.dataset.priceRaw || "0"),
+          stock: parseInt(option.dataset.inventory || "0")
+        };
+      }
+
+      if (singleVariantInputs.length) {
+        const input = singleVariantInputs[0];
+        return {
+          id: input.value,
+          priceRaw: parseInt(input.dataset.priceRaw || "0"),
+          stock: parseInt(input.dataset.inventory || "0")
+        };
+      }
+
+      return { id: "", priceRaw: 0, stock: 0 };
+    }
+
+    function getQuantity() {
+      const val = parseInt(quantityInputs[0]?.value || "1");
+      return isNaN(val) ? 1 : val;
+    }
+
+    function setQuantity(val) {
+      quantityInputs.forEach(input => input.value = val);
+    }
+
+    function updateDisplays() {
+      const { id, priceRaw, stock } = getCurrentVariant();
+      const qty = getQuantity();
+
+      priceDisplays.forEach(el => {
+        el.textContent = formatMoney(priceRaw * qty).replace(/[^\d.,]/g, '');
+      });
+
+      stockDisplays.forEach(el => {
+        el.textContent = stock <= 0 ? "Sin stock" : `En stock: ${stock}`;
+      });
+
+      quantityInputs.forEach(input => input.max = stock);
+      hiddenVariantInputs.forEach(input => input.value = id);
+    }
+
+    // ▶️ SELECTS
+    variantSelects.forEach(select => {
+      select.addEventListener("change", function () {
+        variantSelects.forEach(s => s.value = this.value);
+        updateDisplays();
+      });
+    });
+
+    // ▶️ RADIOS
+    radioButtons.forEach(radio => {
+      radio.addEventListener("change", function () {
+        document.querySelectorAll('.btn-radio').forEach(label => label.classList.remove('on'));
+        const selectedLabel = this.closest('.btn-radio');
+        if (selectedLabel) selectedLabel.classList.add('on');
+        updateDisplays();
+      });
+    });
+
+    // ▶️ BOTONES +
+    plusBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        let qty = getQuantity();
+        const max = parseInt(quantityInputs[0].max) || 999;
+        if (qty < max) {
+          setQuantity(qty + 1);
+          updateDisplays();
+        }
+      });
+    });
+
+    // ▶️ BOTONES -
+    minusBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        let qty = getQuantity();
+        if (qty > 1) {
+          setQuantity(qty - 1);
+          updateDisplays();
+        }
+      });
+    });
+
+    // ▶️ INPUT MANUAL
+    quantityInputs.forEach(input => {
+      input.addEventListener("input", () => {
+        setQuantity(getQuantity());
+        updateDisplays();
+      });
+    });
+
+    // ▶️ AGREGAR AL CARRITO
+    addToCartBtns.forEach(btn => {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        const { id: variantId } = getCurrentVariant();
+        const quantity = getQuantity();
+
+        if (!variantId || quantity < 1) {
+          showToast("Invalid variant or quantity", "danger");
+          return;
+        }
+
+        if (typeof CartJS === "undefined") {
+          showToast("NO CartJS", "danger");
+          return;
+        }
+
+        CartJS.addItem(variantId, quantity, {}, {
+          success: function () {
+            showToast("Product added to cart");
+            updateCartDrawer(true);
+            updateCartCount();
+          },
+          error: function (jqXHR) {
+            let msg = "Oops! Error adding to cart";
+            if (jqXHR?.responseText) {
+              try {
+                const response = JSON.parse(jqXHR.responseText);
+                msg = response.description || msg;
+              } catch (e) {}
+            }
+            showToast(msg, "danger");
+          }
+        });
+      });
+    });
+
+    function showToast(message, type = "success") {
+      const toast = document.createElement("div");
+      toast.className = `custom-toast ${type}`;
+      toast.textContent = message;
+      Object.assign(toast.style, {
+        position: "fixed", top: "20px", right: "20px",
+        background: type === "danger" ? "#e3342f" : "#38c172",
+        color: "#fff", padding: "10px 15px",
+        borderRadius: "6px", zIndex: 9999
+      });
+      document.body.appendChild(toast);
+      setTimeout(() => toast.remove(), 3000);
+    }
+
+    function updateCartCount() {
+      if (typeof CartJS === "undefined") return;
+      document.querySelectorAll(".mega-nav-count .count-items").forEach(el => {
+        el.textContent = CartJS.cart?.item_count || 0;
+      });
+    }
+
+    function updateCartDrawer(openDrawer = false) {
+      $.get("/cart", function (data) {
+        const cartItems = $(data).find("#CartDrawer-CartItems").html();
+        $("#CartDrawer-CartItems").html(cartItems);
+        const cartTotalPrice = $(data).find(".totals__total-value").first().text().trim();
+        $(".totals__total-value").text(cartTotalPrice);
+
+        const drawer = document.querySelector(".drawer");
+        if (CartJS.cart?.item_count > 0) {
+          $(".drawer__inner-empty").hide();
+          $("cart-drawer-items").removeClass("is-empty");
+          $(".cart__footer").show();
+          drawer?.classList.remove("is-empty");
+        } else {
+          $(".drawer__inner-empty").show();
+          $("cart-drawer-items").addClass("is-empty");
+          $(".cart__footer").hide();
+          drawer?.classList.add("is-empty");
+        }
+
+        if (openDrawer) {
+          drawer?.classList.add("active");
+          $("#CartDrawer-Overlay").addClass("active");
+        }
+      });
+    }
+
+    updateDisplays();
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Thumbnails VERTICALES (desktop) / HORIZONTALES (mobile)
+    const thumbnails = new Splide('#thumbnail-slider', {
+      direction: 'ttb', // vertical
+      height: '100%',
+      fixedWidth: '100%',
+      gap: '3vw',
+      isNavigation: true,
+      pagination: false,
+      arrows: false,
+      drag: true,
+      breakpoints: {
+        768: {
+          direction: 'ltr', // horizontal en mobile
+          height: 'auto',
+          fixedWidth: '100%',
+  
+        }
+      }
+    });
+  
+    // Carrusel principal NORMAL (slide horizontal, no fade)
+    const main = new Splide('#main-slider', {
+      type: 'slide',
+      perPage: 1,
+      rewind: true,
+      pagination: false,
+      arrows: false,
+      drag: true,
+      lazyLoad: 'nearby',
+      speed: 500,
+      gap: 10,
+    });
+  
+    main.sync(thumbnails); // sincronizamos ambos
+    thumbnails.mount();
+    main.mount();
+  });
+
+  
+  document.addEventListener('DOMContentLoaded', function () {
+    // Thumbnails VERTICALES (desktop) / HORIZONTALES (mobile)
+    const thumbnails = new Splide('#thumbnail-slider-2', {
+      fixedWidth: '100%',
+      gap: '3vw',
+      isNavigation: true,
+      pagination: false,
+      arrows: false,
+      drag: true,
+      breakpoints: {
+        991: {
+          fixedWidth: '100%',
+  
+        }
+      }
+    });
+  
+    // Carrusel principal NORMAL (slide horizontal, no fade)
+    const main = new Splide('#main-slider-2', {
+      type: 'slide',
+      perPage: 1,
+      rewind: true,
+      pagination: false,
+      arrows: false,
+      drag: true,
+      lazyLoad: 'nearby',
+      speed: 500,
+      gap: 10,
+    });
+  
+    main.sync(thumbnails); // sincronizamos ambos
+    thumbnails.mount();
+    main.mount();
+  });
+</script>
+
+<style>
+  .nutritional-active{
+    color: {{ product.metafields.custom.color_contrast }};
+  }
+  section._product._i ._information .product-title{
+    color:{{ product.metafields.custom.main_color }};
+  }
+  section._product._i>form>._flex ._first ._content aside._bg svg path,
+  section._product._i ._information aside.d-lg-none ._bg svg path{
+    fill: {{ product.metafields.custom.second_color }};
+  }
+  section._product._i ._information ._actions button._btn.btn-i._4{
+    background: {{ product.metafields.custom.main_color }};
+    color: {{ product.metafields.custom.color_contrast }};
+  }
+  section._product._i ._information ._actions button._btn.btn-i._4:hover{
+    background: #fff7eb;
+    color: {{ product.metafields.custom.main_color }};
+    box-shadow: -.3vw .3vw {{ product.metafields.custom.main_color }};
+  }
+  section._product._i ._information,
+  section._product._i ._actions .quantity-wrapper button{
+    color:{{ product.metafields.custom.color }};
+  }
+  section._product._i ._first ._content ._media:before,
+  section._product._i ._first ._content ._nutritional:before{
+    background:{{ product.metafields.custom.main_color }};
+  }
+  section._product._i .related-products .related-button{
+    color: {{ product.metafields.custom.color }};
+  }
+  section._product._i .related-products .related-button.on {
+    border-color: {{ product.metafields.custom.color }};
+    box-shadow:
+      -0.05vw 0.05vw 0 0 {{ product.metafields.custom.color }},
+      -0.10vw 0.10vw 0 0 {{ product.metafields.custom.color }},
+      -0.15vw 0.15vw 0 0 {{ product.metafields.custom.color }},
+      -0.20vw 0.20vw 0 0 {{ product.metafields.custom.color }},
+      -0.25vw 0.25vw 0 0 {{ product.metafields.custom.color }},
+      -0.30vw 0.30vw 0 0 {{ product.metafields.custom.color }},
+      -0.35vw 0.35vw 0 0 {{ product.metafields.custom.color }},
+      -0.40vw 0.40vw 0 0 {{ product.metafields.custom.color }},
+      -0.45vw 0.45vw 0 0 {{ product.metafields.custom.color }},
+      -0.50vw 0.50vw 0 0 {{ product.metafields.custom.color }};
+  }
+</style>
+
+
+
+
+
+
+   
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Check if the device is mobile
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+
+  if (isMobile) {
+    // Move varietyContainer before accordionIngredients
+    const varietyContainer = document.querySelector('.variety-list-container');
+    const accordionIngredients = document.querySelector('#accordionIngredients');
+
+    if (varietyContainer && accordionIngredients) {
+      accordionIngredients.parentNode.insertBefore(varietyContainer, accordionIngredients);
+    } else {
+      console.error('Variety container or accordion ingredients not found');
+    }
+
+    // Move cheddarContainer before accordionIngredients
+    const cheddarContainer = document.querySelector('.cheddar-list-container');
+    if (cheddarContainer && accordionIngredients) {
+      accordionIngredients.parentNode.insertBefore(cheddarContainer, accordionIngredients);
+    } else {
+      console.error('Cheddar container or accordion ingredients not found');
+    }
+
+    // Move rosemaryContainer to the start of mainIngredient
+    const rosemaryContainer = document.querySelector('.rosemary-list-container');
+    const mainIngredient = document.querySelector('#Main-ingradiewnt-0');
+
+    if (rosemaryContainer && mainIngredient) {
+      mainIngredient.insertBefore(rosemaryContainer, mainIngredient.firstChild);
+    } else {
+      console.error('Rosemary container or main ingredient not found');
+    }
+  }
+});
+</script>
+{% schema %}
+  {
+    "name": "Product I",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background color",
+        "default": "#fff7eb"
+      }
+    ]
+  }
+{% endschema %}

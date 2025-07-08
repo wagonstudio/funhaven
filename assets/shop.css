@@ -1,0 +1,388 @@
+/* I */
+  section._shop._i>._content figure._bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  section._shop._i>._content .full-1 {
+    position: relative;
+    z-index: 2;
+  }
+  section._shop._i>._content .full-1 ._flex ._head>div {
+    width: 80%;
+    margin: 0 auto;
+  }
+  section._shop._i>._content .full-1 ._flex  ._character {
+    position: relative;
+  }
+  section._shop._i>._content .full-1 ._flex ._character figure._message._1 ._bg svg {
+    width: 100%;
+    height: 100%;
+  }
+  section._shop._i>._content .full-1 ._flex ._character._2 figure._message._1 ._bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height:120%;
+  }
+  section._shop._i>._content figure._bg ._in-bg img {
+    width: 100%;
+  }
+  section._shop._i>._content figure._bg ._in-bg {
+    width: 100%;
+  }
+  section._shop._i>._content .full-1 ._flex ._character._1 figure._message._1 ._bg img,
+  section._shop._i>._content .full-1 ._flex ._character._2 figure._message._1 ._bg img {
+    height: inherit;
+  }
+  section._shop._i>._content .full-1 ._flex ._character._2 figure._fun {
+    bottom: -5%;
+    position: relative;
+  }
+  section._shop._ii article._pdp._1 ._content ._info .title-4{
+    min-height: 6vw;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  section._shop._ii article._pdp._1 ._content ._info .text-m {
+    min-height: 6vw;
+    width: 80%;
+    margin: 0 auto 1vw;
+  }
+/* END I */
+/* FOOTER */
+  body.template-collection-shop div#shopify-section-foot {
+    background: #ffd664;
+  }
+  section._shop._i>._content .full-1 ._flex ._character._1 figure._message {
+    position: relative;
+    color: #ffffff;
+  }
+    section._shop._ii .in-boding article._pdp._1 {
+      background: #FCF9EF;
+      text-align: center;
+    }
+  section._shop._i>._content .full-1 ._flex ._character._2 figure._message ._text{
+    color:#3973C6;
+  }
+  section._shop._ii ._boding .splide__track {
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+  }
+/* END FOOTER */
+/* RESPOSNIVE */
+  @media(min-width:1200px){
+    
+    section._shop._i{
+      position:relative;
+      padding: 15vw 0 0;
+    }
+    section._shop._i>._content .full-1 ._flex ._character._1 figure._message {
+      padding: 10%;
+      width:90%;
+      left:30%;
+    }
+    section._shop._i>._content .full-1 ._flex ._character._2 figure._message{
+        left: -20%;
+    }
+    section._shop._ii .in-boding article._pdp._1 {
+      border-radius: 1.5vw;
+      padding: 10%;
+      height: 100%;
+    }
+    section._shop._ii .in-boding article._pdp._1 ._media {
+      width: 15vw;
+      height: 20vw;
+      margin: 0 auto;
+    }
+    
+    section._shop._ii .in-boding article._pdp._1 ._media ._pic {
+      width: 100%;
+      height: 100%;
+    }
+    
+    section._shop._ii .in-boding article._pdp._1 ._media ._pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+  @media(max-width:1199px) and (min-width:992px){
+    section._shop._i{
+      position:relative;
+      padding: 15vw 0 5vw;
+    }
+    section._shop._ii .in-boding article._pdp._1 {
+      border-radius: 1.5vw;
+      padding: 10%;
+      height:100%;
+    }
+    section._shop._i>._content .full-1 ._flex ._character._1 figure._message {
+      padding: 10%;
+      width:90%;
+    }
+    
+  }
+  @media(min-width:992px){
+    section._shop._i>._content .full-1 ._flex ._character._2 figure._message{
+      position: relative;
+      padding: 5%;
+      width: 100%;
+      color: #3973C6;
+      left: 0%;
+    }
+    section._shop._i>._content .full-1 ._flex ._head {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 50%;
+    }
+    section._shop._i>._content .full-1 ._flex ._character._1 {
+      width: 20%;
+    }
+    section._shop._i>._content .full-1 ._flex ._character._2 {
+      width: 20%;
+      bottom:-4.5vw;
+    }
+  }
+  @media(max-width:991px){
+    section._followus._i ._heading .title-3 {
+      padding-bottom: 0 !important;
+    }
+    section._shop._ii article._pdp._1 ._content ._info .text-m{
+      margin-bottom:5vw;
+    }
+    section._shop._i>._content .full-1 ._flex ._head {
+      width: 100%;
+    }
+    section._shop._i ._character._1 figure._fun.fun-i {
+      position: relative;
+      display: block;
+      left: -26%;
+    }
+    section._shop._i>._content .full-1 ._flex ._character._2 figure._fun{
+      right: -48%;
+      width: 80%;
+    }
+    section._shop._i{
+      overflow: hidden;
+    }
+  }
+  @media(max-width:991px) and (min-width:768px){
+    section._shop._i{
+      position:relative;
+      padding: 15vw 0 0;
+    }
+    section._shop._ii .in-boding article._pdp._1 {
+      border-radius: 1.5vw;
+      padding: 10%;
+      height:100%;
+    }
+    section._shop._i>._content .full-1 ._flex ._head {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 60%;
+    }
+    section._shop._i>._content .full-1 ._flex ._character._1 {
+      width: 20%;
+    }
+    section._shop._i>._content .full-1 ._flex ._character._2 {
+      width: 20%;
+      bottom:-4.5vw;
+    }
+    section._shop._i>._content .full-1 ._flex ._character._1 figure._message {
+      position: relative;
+      padding: 10%;
+      width:107%;
+      color: #ffffff;
+      right:-10%;
+    }
+    section._shop._i>._content .full-1 ._flex ._character._2 figure._message{
+      position: relative;
+      padding: 10%;
+      width: 117%;
+      color: #3973c6;
+      left: -25%;
+    }
+  }
+  @media(min-width:768px){ 
+    section._shop._i>._content .full-1 ._flex ._character._1 figure._message._1 ._bg {
+      position: absolute;
+      top: -15%;
+      right: 0;
+      left: 0;
+      height: 140%;
+    }
+    section._shop._i>._content .full-1 ._flex ._character._1 figure._message._1>._text {
+      position: relative;
+      z-index: 2;
+      padding: 0 0 5% 0;
+      transform: rotate(5deg);
+    }
+    section._shop._i>._content .full-1 ._flex ._character._2 figure._message._1>._text {
+      position: relative;
+      z-index: 2;
+      padding: 5%;
+      width:90%;
+      margin: 0 auto;
+      transform: rotate(-12deg);
+    }
+  }
+  @media(max-width:767px){
+    ._about._i ._items ._item:last-of-type span {
+      width: 86%;
+      margin: 0 auto;
+      display: block;
+    }
+    section._shop._ii {
+      margin-top: -5vw;
+      padding-top:0;
+      padding-bottom: 5vw;
+    }
+    footer._foot._1.footer-main figure.funny{
+      bottom:-6vw;
+    }
+    section._shop._i>._content .full-1 ._flex ._character{
+      padding-top:5vw;
+    }
+    section._shop._i>._content .full-1 ._flex ._character._1 figure._message._1 ._bg {
+      position: absolute;
+      top: -15%;
+      right: 0;
+      left: -10%;
+      height: 160%;
+      width: 120%;
+    }
+    section._shop._i>._content figure._bg {
+      display: flex;
+      align-items: end;
+    }
+    section._shop._i>._content .full-1 ._flex ._character._1 figure._message._1>._text {
+      position: relative;
+      z-index: 2;
+      padding: 5%;
+      transform: rotate(12deg);
+    }
+    section._shop._i ._content>div>._flex ._character {
+      order: 2;
+    }
+    
+    section._shop._i ._content>div>._flex ._head {
+      order: 1;
+      padding-bottom: 10vw;
+    }
+    
+    section._shop._i ._content>div>._flex ._character {
+      width: calc(50% - 2vw);
+    }
+    section._shop._i>._content .full-1 ._flex ._character._2 figure._message ._text {
+      padding: 14%;
+      z-index: 2;
+      position: relative;
+      transform: rotate(-15deg);
+      width: 100%;
+    }
+    section._shop._i>._content .full-1 ._flex ._character._1 figure._message ._text {
+      padding: 14%;
+      z-index: 2;
+      position: relative;
+      transform: rotate(15deg);
+      width: 100%;
+    }
+  }
+  @media(max-width:767px) and (min-width:576px){
+    section._shop._i>._content .full-1 ._flex ._character._1 figure._message {
+      width: 65%;
+      bottom: 10%;
+    }
+    section._shop._i>._content .full-1 ._flex ._character._2 figure._message {
+      width: 65%;
+      margin-left: auto;
+    }
+    section._shop._ii ._boding .in-boding .splide__slide img {
+      width: 25vw;
+      height: 25vw;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto 2vw;
+    }
+    section._shop._ii ._boding .in-boding {
+      width: 80%;
+      margin: 0 auto;
+      display: block;
+    }
+    section._shop._i{
+      position:relative;
+      padding: 20vw 0 1vw;
+    }
+    section._shop._ii .in-boding article._pdp._1 {
+      border-radius: 2.5vw;
+      padding: 10%;
+      height:100%;
+    }
+  }
+  @media(max-width:575px){
+    section._shop._i>._content .full-1 ._flex ._character._1 figure._message {
+      width: 90%;
+      bottom: 10%;
+    }
+    section._shop._i>._content .full-1 ._flex ._character._2 figure._message {
+      width: 120%;
+      margin-left: auto;
+    }
+    section._shop._ii ._boding .in-boding {
+      width: 100%;
+      margin: 0 auto;
+      display: block;
+    }
+    section._shop._i{
+      position:relative;
+      padding: 20vw 0 5vw;
+    }
+    section._shop._ii .in-boding article._pdp._1 {
+      border-radius: 2.5vw;
+      padding: 10%;
+      height:100%;
+    }
+  }
+
+/* END RESPOSNIVE */
+
+
+
+section._shop._ii .in-boding article._pdp._1{
+  transition: all 0.9s cubic-bezier(0,1.19,.58,.94);
+}
+section._shop._ii .in-boding article._pdp._1:hover{
+  transform:scale(1.05);
+}
+section._shop._i>._content .full-1 ._flex ._character {
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0,1.19,.58,.94);
+}
+.move_5 section._shop._i>._content .full-1 ._flex ._character {
+  opacity: 1;
+}
+section._shop._i>._content .full-1 ._flex ._head{
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0,1.19,.58,.94);
+}
+.move_3 section._shop._i>._content .full-1 ._flex ._head{
+  opacity: 1;
+}
+
+section._shop._ii ._boding .splide__track{
+  opacity: 0;
+  transform:translateY(20vw);
+  transition: all 0.5s cubic-bezier(0,1.19,.58,.94);
+}
+.move_4 section._shop._ii ._boding .splide__track{
+  opacity: 1;
+  transform:translateY(0);
+}

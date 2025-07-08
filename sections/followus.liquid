@@ -1,0 +1,150 @@
+<section class="_followus _i" style="background-color: {{ section.settings.background_color }};">
+  <span id="trigger_followus_i_1" class="_trigger"></span>
+  <span id="trigger_followus_i_2" class="_trigger"></span>
+  <span id="trigger_followus_i_3" class="_trigger"></span>
+  <span id="trigger_followus_i_4" class="_trigger"></span>
+  <span id="trigger_followus_i_5" class="_trigger"></span>
+
+  <div class="_content">
+    <div class="_inside _1">
+      <div class="_container full-1">
+        <div class="_heading">
+          <div class="title-1">
+            <h2><span data-splitting>{{ section.settings.heading }}</span></h2>
+          </div>
+          <div class="title-3">
+            <h3><span data-splitting>{{ section.settings.subtitle }}</span></h3>
+          </div>
+        </div>
+      </div>
+      <div class="_boding">
+
+        <div class="_inside">
+          <div class="_pictures">
+            <div class="splide splide_pics_home-vi">
+              <div class="splide__track">
+                <div class="splide__list">
+                  {% for block in section.blocks %}
+                    <div class="splide__slide" {{ block.shopify_attributes }}>
+                      <figure class="_pic _{{ forloop.index }}">
+                        {% if block.settings.image %}
+                          <img src="{{ block.settings.image | image_url: width: 900 }}" alt="Slide {{ forloop.index }}">
+                        {% endif %}
+                      </figure>
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+      
+            <script>
+              document.addEventListener('DOMContentLoaded', function () {
+                new Splide('.splide_pics_home-vi', {
+                  type: 'loop',
+                  gap: '2vw',
+                  perPage: 3,
+                  perMove: 3,
+                  focus: 'center',
+                  autoplay    : true,
+                  interval    : 0,       // sin pausa entre slides
+                  speed       : 6000,    // velocidad de desplazamiento
+                  rewind      : false,
+                  arrows      : false,
+                  pagination  : false,
+                  drag        : false,
+                  pauseOnHover: false,
+                  pauseOnFocus: false,
+                  padding: {left: "10%", right: "10%"},
+                  breakpoints: {
+                    991: {
+                      gap: '2vw',
+                      perPage: 2,
+                      padding: {left: "20%", right: "20%"},
+                    },
+                    767: {
+                      gap: '5vw',
+                      perPage: 1,
+                      padding: {left: "20%", right: "20%"},
+                    }
+                  }
+                }).mount();
+              });
+            </script>
+      
+      
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Follow us",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#fff7eb"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "What Makes Us Different Than Other Crackers?"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "@FUNHAVENFOODS"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Slide Image"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 10,
+  "presets": [
+    {
+      "name": "Follow us",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "slide",
+          "settings": {
+          }
+        },
+        {
+          "type": "slide",
+          "settings": {
+          }
+        },
+        {
+          "type": "slide",
+          "settings": {
+          }
+        },
+        {
+          "type": "slide",
+          "settings": {
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+

@@ -1,0 +1,102 @@
+/* CONTAINER */
+  ._container{
+    max-width:calc(100% - 2rem);
+    margin:0 auto;
+  }
+  @media(min-width:1800px){
+    ._container.full-1{
+      width: calc(100% - 4vw);
+    }
+    ._container.full-2{
+      width: calc(90% - 4vw);
+    }
+    ._container.full-3{
+      width: calc(80% - 4vw);
+    }
+    ._container.full-4{
+      width: calc(70% - 4vw);
+    }
+    ._container._1{
+      width: calc(90% - 4vw);
+    }
+  }
+  @media(min-width:1400px) and (max-width:1799px){
+    ._container.full-1{
+      width: calc(100% - 4vw);
+    }
+    ._container.full-2{
+      width: calc(90% - 4vw);
+    }
+    ._container.full-3{
+      width: calc(80% - 4vw);
+    }
+    ._container.full-4{
+      width: calc(70% - 4vw);
+    }
+    ._container._1{
+      width: calc(90% - 4vw);
+    }
+  }
+  @media(min-width:1200px) and (max-width:1399px){
+    ._container.full-1{
+      width: calc(100% - 4vw);
+    }
+    ._container.full-2{
+      width: calc(90% - 4vw);
+    }
+    ._container.full-3{
+      width: calc(80% - 4vw);
+    }
+    ._container.full-4{
+      width: calc(70% - 4vw);
+    }
+    ._container._1{
+      width: calc(90% - 4vw);
+    }
+  }
+  @media(min-width:992px) and (max-width:1199px){
+    ._container.full-1{
+      width: calc(100% - 4vw);
+    }
+    ._container.full-2{
+      width: calc(95% - 4vw);
+    }
+    ._container.full-3{
+      width: calc(85% - 4vw);
+    }
+    ._container.full-4{
+      width: calc(75% - 4vw);
+    }
+    ._container._1{
+      width: calc(992px - 2rem);
+    }
+  }
+  @media(min-width:768px) and (max-width:991px){
+    ._container.full-1{
+      width: calc(100% - 2rem);
+    }
+    ._container.full-2{
+      width: calc(95% - 2rem);
+    }
+    ._container.full-3{
+      width: calc(90% - 2rem);
+    }
+    ._container.full-4{
+      width: calc(85% - 2rem);
+    }
+   ._container._1{
+      width:calc(100% - 2rem);
+    }
+  }
+  @media(max-width:767px){
+    ._container.full-1,
+    ._container.full-2,
+    ._container.full-3,
+    ._container.full-4{
+      width: calc(100% - 2rem);
+    }
+    ._container._1{
+      width:calc(100% - 2rem);
+    }
+  }
+/* END CONTAINER */

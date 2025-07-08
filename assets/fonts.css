@@ -1,0 +1,41 @@
+/* Dazzed Regular */
+@font-face {
+  font-family: 'Dazzed';
+  src: url('https://cdn.shopify.com/s/files/1/0619/3971/2098/files/Dazzed-Regular.woff2?v=1744643510') format('woff2'),
+       url('https://cdn.shopify.com/s/files/1/0619/3971/2098/files/Dazzed-Regular.woff?v=1744643511') format('woff'),
+       url('https://cdn.shopify.com/s/files/1/0619/3971/2098/files/Dazzed-Regular.ttf?v=1744643515') format('truetype'),
+       url('https://cdn.shopify.com/s/files/1/0619/3971/2098/files/Dazzed-Regular.otf?v=1744643519') format('opentype');
+}
+
+/* TayKari */
+@font-face {
+  font-family: 'TayKari';
+  src: url('https://cdn.shopify.com/s/files/1/0619/3971/2098/files/TayKari.woff2?v=1744643426') format('woff2'),
+       url('https://cdn.shopify.com/s/files/1/0619/3971/2098/files/TayKari.woff?v=1744643426') format('woff'),
+       url('https://cdn.shopify.com/s/files/1/0619/3971/2098/files/TayKari.ttf?v=1744643426') format('truetype'),
+       url('https://cdn.shopify.com/s/files/1/0619/3971/2098/files/TayKari.otf?v=1744643444') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* TAYAmaya */
+@font-face {
+  font-family: 'TAYAmaya';
+  src: url('https://cdn.shopify.com/s/files/1/0619/3971/2098/files/TAYAmaya.woff2?v=1744643426') format('woff2'),
+       url('https://cdn.shopify.com/s/files/1/0619/3971/2098/files/TAYAmaya.woff?v=1744643426') format('woff'),
+       url('https://cdn.shopify.com/s/files/1/0619/3971/2098/files/TAYAmaya.ttf?v=1744643426') format('truetype'),
+       url('https://cdn.shopify.com/s/files/1/0619/3971/2098/files/TAYAmaya.otf?v=1744643437') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Delicious Handrawn */
+@font-face {
+  font-family: 'Delicious Handrawn';
+  src: url('https://cdn.shopify.com/s/files/1/0658/4474/0231/files/DeliciousHandrawn-Regular.ttf?v=1747215715') format('truetype'));
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

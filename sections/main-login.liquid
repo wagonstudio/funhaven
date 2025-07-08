@@ -1,0 +1,300 @@
+{%- if section.settings.enable_shop_login_button == false -%}
+  {%- assign hide_shop_login_button = true -%}
+{%- endif -%}
+
+<section class="_account _1" aria-label="Customer Login and Password Recovery">
+  <div class="_content">
+    <div class="_container full-3">
+      <div class="in-account">
+        <div class="card-i _bubblegum">
+          <div class="_card-content" id="login-content-bg">
+            <div class="customer login section-{{ section.id }}-padding">
+              <!-- Password Recovery Form -->
+              <h1 id="recover" tabindex="-1">{{ 'customer.recover_password.title' | t }}</h1>
+              <div>
+                <p>{{ 'customer.recover_password.subtext' | t }}</p>
+
+                {%- form 'recover_customer_password', novalidate: 'novalidate' -%}
+                  {% assign recover_success = form.posted_successfully? %}
+                  <div class="field">
+                    <div class="input-wrapper">
+                      <input
+                        type="email"
+                        name="email"
+                        id="RecoverEmail"
+                        class="field__input"
+                        autocorrect="off"
+                        autocapitalize="off"
+                        autocomplete="email"
+                        {% if form.errors %}
+                          aria-invalid="true"
+                          aria-describedby="RecoverEmail-email-error"
+                          autofocus
+                        {% endif %}
+                        placeholder="{{ 'customer.login_page.email' | t }}"
+                        required
+                      >
+                      <label for="RecoverEmail" class="field__label">{{ 'customer.login_page.email' | t }}</label>
+                    </div>
+
+                    {%- if form.errors -%}
+                      <small id="RecoverEmail-email-error" class="form__message">
+                        <span class="svg-wrapper">
+                          {{- 'icon-error.svg' | inline_asset_content -}}
+                        </span>
+                        {{ form.errors.translated_fields.email | capitalize }}
+                        {{ form.errors.messages.email }}
+                      </small>
+                    {%- endif -%}
+                  </div>
+
+                  <button type="submit">{{ 'customer.login_page.submit' | t }}</button>
+                  <a href="#login">{{ 'customer.login_page.cancel' | t }}</a>
+                {%- endform -%}
+              </div>
+
+              <!-- Login Form -->
+              <h1 id="login" tabindex="-1" class="title-2 text-dusk">{{ 'customer.login_page.title' | t }}</h1>
+              <div>
+                {%- if recover_success -%}
+                  <h3 class="form__message" tabindex="-1" autofocus>
+                    <span class="svg-wrapper">
+                      {{- 'icon-success.svg' | inline_asset_content -}}
+                    </span>
+                    {{ 'customer.recover_password.success' | t }}
+                  </h3>
+                {%- endif -%}
+
+                {%- form 'customer_login', novalidate: 'novalidate' -%}
+                  {%- if form.errors -%}
+                    <h2 class="form__message" tabindex="-1" autofocus>
+                      <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+                      <span class="svg-wrapper">
+                        {{- 'icon-error.svg' | inline_asset_content -}}
+                      </span>
+                      {{ 'templates.contact.form.error_heading' | t }}
+                    </h2>
+                    <small class="form__message">
+                      {{ form.errors.translated_fields.form | capitalize }}
+                      {{ form.errors.messages.form }}
+                    </small>
+                  {%- endif -%}
+
+                  {%- if shop.features.login_with_shop_classic_customer_accounts?
+                    and section.settings.enable_shop_login_button
+                  -%}
+                    <section name="sign-in-with-shop-provider">
+                      {{ shop | login_button: hide_button: hide_shop_login_button }}
+                      {%- unless hide_shop_login_button -%}
+                        <p>{{ 'customer.login_page.alternate_provider_separator' | t }}</p>
+                      {%- endunless -%}
+                    </section>
+                  {%- endif -%}
+
+                  <div class="field">
+                    <div class="input-wrapper">
+                      <input
+                        type="email"
+                        name="customer[email]"
+                        id="CustomerEmail"
+                        class="field__input"
+                        autocomplete="email"
+                        autocorrect="off"
+                        autocapitalize="off"
+                        {% if form.errors %}
+                          aria-invalid="true"
+                          aria-describedby="CustomerEmail-error"
+                        {% endif %}
+                        placeholder="{{ 'customer.login_page.email' | t }}"
+                        required
+                      >
+                      <label for="CustomerEmail" class="field__label">{{ 'customer.login_page.email' | t }}</label>
+                    </div>
+                    {%- if form.errors -%}
+                      <small id="CustomerEmail-error" class="form__message">
+                        {{ form.errors.translated_fields.email | capitalize }}
+                        {{ form.errors.messages.email }}
+                      </small>
+                    {%- endif -%}
+                  </div>
+
+                  {%- if form.password_needed -%}
+                    <div class="field">
+                      <div class="input-wrapper">
+                        <input
+                          type="password"
+                          name="customer[password]"
+                          id="CustomerPassword"
+                          class="field__input"
+                          autocomplete="current-password"
+                          {% if form.errors %}
+                            aria-invalid="true"
+                            aria-describedby="CustomerPassword-error"
+                          {% endif %}
+                          placeholder="{{ 'customer.login_page.password' | t }}"
+                          required
+                        >
+                        <label for="CustomerPassword" class="field__label">
+                          {{- 'customer.login_page.password' | t -}}
+                        </label>
+                      </div>
+                      {%- if form.errors -%}
+                        <small id="CustomerPassword-error" class="form__message">
+                          {{ form.errors.translated_fields.password | capitalize }}
+                          {{ form.errors.messages.password }}
+                        </small>
+                      {%- endif -%}
+                    </div>
+                  {%- endif -%}
+
+                  <button type="submit" id="login-btn">{{ 'customer.login_page.sign_in' | t }}</button>
+                  <a class="text-dusk" href="/account/login?return_url=%2Faccount#recover" id="login-forgot-pass">
+                    {{- 'customer.login_page.forgot_password' | t -}}
+                  </a>
+                  <a class="login-sign-in-btn" href="{{ routes.account_register_url }}">
+                    {{- 'customer.login_page.create_account' | t -}}
+                  </a>
+                {%- endform -%}
+              </div>
+
+              <!-- Guest Login -->
+              {%- if shop.checkout.guest_login -%}
+                <div>
+                  <hr>
+                  <h2>{{ 'customer.login_page.guest_title' | t }}</h2>
+                  {%- form 'guest_login' -%}
+                    <button type="submit">{{ 'customer.login_page.guest_continue' | t }}</button>
+                  {%- endform -%}
+                </div>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% render 'foot' %}
+  </div>
+  <figure class="_bg">
+    <img
+      src="https://cdn.shopify.com/s/files/1/0658/4474/0231/files/Account_1.png?v=1748340497"
+      alt="Background image for login page"
+    >
+  </figure>
+</section>
+
+{{ 'customer.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .field {
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+
+  .input-wrapper {
+    position: relative;
+  }
+
+  .field__input {
+    font-size: 1rem;
+    padding: 10px 12px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: #fff;
+  }
+
+  .field__label {
+    position: absolute;
+    left: 12px!important;
+    top: 44%!important;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #666;
+    transition: all 0.2s ease;
+    pointer-events: none;
+    background:none;
+    padding: 0 4px;
+  }
+
+  .field__input:focus ~ .field__label,
+  .field__input:not(:placeholder-shown) ~ .field__label,
+  .field__input:-webkit-autofill ~ .field__label,
+  .customer .field input:focus ~ .field__label,
+  .customer .field input:not(:placeholder-shown) ~ .field__label,
+  .customer .field input:-webkit-autofill ~ .field__label {
+    top: 0;
+    left: 0;
+    letter-spacing: 0.04rem;
+    transform: translateY(-110%) scale(0.9);
+    color: #333;
+    padding: 0;
+  }
+
+  .field__input:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+
+  .field__input[aria-invalid="true"] {
+    border-color: #dc3545;
+  }
+  .field__input, .customer .field input {
+    color: #3973c6;
+  }
+  .form__message {
+    color: #dc3545;
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+  }
+{%- endstyle -%}
+
+{% schema %}
+{
+  "name": "t:sections.main-login.name",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_shop_login_button",
+      "label": "t:sections.main-login.shop_login_button.enable",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ]
+}
+{% endschema %}

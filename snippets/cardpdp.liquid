@@ -1,0 +1,41 @@
+<article class="_pdp _2 pdp-{{ product.id }}" style="color: {{ product.metafields.custom.color }}; ">
+  <div class="_content">
+    <div class="_media">
+      <figure class="_pic">
+        <img src="{{ product.featured_image | img_url: '800x' }}" alt="{{ product.title }}">
+        <a class="_link-hide" href="{{ product.url }}"></a>
+      </figure>
+    </div>
+    <div class="_info">
+      <h2 class="title-4">{{ product.title | upcase }} <a class="_link-hide" href="{{ product.url }}"></a></h2>
+      <p class="text-m _rgl">{{ product.metafields.custom.intro | strip_html | truncatewords: 20 }} <a class="_link-hide" href="{{ product.url }}"></a></p>
+      <a class="_btn btn-i _2 m-0-auto"  href="{{ product.url }}">
+        <span class="_info text-btn">Shop now</span>
+      </a>
+      
+      <form class="add-to-cart-form d-none" data-product-id="{{ product.id }}">
+        <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+
+        {% assign in_stock = false %}
+        {% for variant in product.variants %}
+          {% if variant.inventory_quantity > 0 %}
+            {% assign in_stock = true %}
+          {% endif %}
+        {% endfor %}
+
+        <button
+          class="quick-add btn-add-cart add-to-cart text-2 _rgl _uppercase link-1 _mdm {% unless in_stock %}open-modal{% endunless %}"
+          {% unless in_stock %} data-bs-toggle="modal" data-bs-target="#modal-klaviyo" {% endunless %}
+          {% if in_stock %}
+            data-cart-add
+            data-id="{{ product.variants.first.id }}"
+            data-quantity="1"
+          {% endif %}
+        >
+          <span>Quick Add</span>
+        </button>
+      </form>
+    </div>
+  </div>
+  <a class="_link-hide" href="{{ product.url }}"></a>
+</article>

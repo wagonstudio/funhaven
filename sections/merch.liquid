@@ -1,0 +1,78 @@
+<section class="_merch _i" style="background-color: {{ section.settings.background_color }};">
+  <div class="_content">
+    <div class="_container full-1">
+      <div class="_inside">
+        <div class="_container full-4">
+        <div class="_head text-center">
+          <div class="title-2 text-evergreen pb-2"><h1 data-splitting>{{ section.settings.heading | escape }}</h1></div>
+          <div class="description title-5 text-evergreen">{{ section.settings.description }}</div>
+        </div>
+        </div>
+        <div class="_collection">
+          {% assign fallback_collection = collections['merch'] %}
+          
+          {% if fallback_collection.products.size > 1 %}
+            <div class="merch-products">
+              {% for related_product in fallback_collection.products %}
+                {% unless related_product.id == product.id %}
+                  {% render 'cardpdp', product: related_product,forloop: forloop %}
+                {% endunless %}
+              {% endfor %}
+            </div>
+          {% else %}
+            <div class="merch-products sngl-prod-img-main">
+              <div class="_flex">
+                <div class="_first merch-products-img-main">
+                 <div class="merch-pdp _1">
+                    <figure>
+                      <span class="sticker _1">
+                        <img src="https://cdn.shopify.com/s/files/1/0619/3971/2098/files/coming_soon.svg?v=1748980818">
+                      </span>
+                      <img src="https://cdn.shopify.com/s/files/1/0619/3971/2098/files/merch_2.png?v=1745125837">
+                    </figure>
+                  </div>
+                </div>
+                <div class="_second merch-products-img-main">
+                  <div class="merch-pdp _2">
+                    <figure>
+                      <span class="sticker _1">
+                        <img src="https://cdn.shopify.com/s/files/1/0619/3971/2098/files/coming_soon.svg?v=1748980818">
+                      </span>
+                      <img src="https://cdn.shopify.com/s/files/1/0658/4474/0231/files/Our-merch-sec-img2.png?v=1747810299">
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Merch",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background color",
+        "default": "#fff7eb"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Our merch (coming soon)"
+      },
+      {
+        "type": "richtext",
+        "id": "description",
+        "label": "Description",
+        "default": "<p>Need something to feel great in, no matter whether you’re working at home, hanging on the couch, or on the move exploring the world? We got you! Check out our limited edition pieces that we created just for you.</p>"
+      }
+    ]
+  }
+{% endschema %}

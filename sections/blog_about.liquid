@@ -1,0 +1,44 @@
+<section class="_blog" style="background-color: {{ section.settings.background_color }};">
+  <div class="_container full-1">
+    <div class="in-blog">
+      <div class="_posts">
+        {% assign blog_articles = blogs['about'].articles | reverse  %}
+        
+        {% for article in blog_articles limit: 9 %}
+          <article class="card-post-i"
+                   style="background: {{ article.metafields.custom.main_color }}; color: {{ article.metafields.custom.color_contrast }};">
+            <div class="in-article">
+              <figure class="_media">
+                {% if article.image %}
+                  <img src="{{ article.image | image_url: width: 800 }}" alt="{{ article.title }}">
+                {% endif %}
+              </figure>
+              <div class="_info">
+                <div class="title-4">
+                  <h4>{{ article.title }}</h4>
+                </div>
+                <div class="text-m">
+                  {{ article.excerpt_or_content }}
+                </div>
+              </div>
+            </div>
+          </article>
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+  {
+    "name": "Blog about",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background color",
+        "default": "#FBEAA8"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,349 @@
+/* FUNNIES */
+  figure.fun {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-gap: 5%;
+  }
+  figure.fun svg {
+    width: 100%;
+    height: 100%;
+  }
+  figure.fun span {
+    max-width: 100%;
+  }
+  figure.fun ._body {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    top:0;
+  }
+  figure.fun ._hand-left,
+  figure.fun ._hand-right {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+  }
+  figure.fun._hearting ._heart {
+    position: absolute;
+  }
+/* END FUNNIES */
+/* COLORS */
+  .fun-persimmon ._skin svg path:not(._inherit) {
+    fill: #ED5C2F;
+  }
+  .fun-marigold ._skin svg path:not(._inherit) {
+    fill: #FF7F4D;
+  }
+  .fun-peppercorn ._skin svg path:not(._inherit) {
+    fill: #383A3D;
+  }
+  .fun-rosemary ._skin svg path:not(._inherit) {
+    fill: #208961;
+  }
+  .fun-bubblegum ._skin svg path:not(._inherit) {
+    fill: #FFA9E7;
+  }
+  .fun-cornflower ._skin svg path:not(._inherit) {
+    fill: #3973C6;
+  }
+  .fun-canary ._skin svg path:not(._inherit) {
+    fill: #FFD664;
+  }
+  .fun-butter ._skin svg path:not(._inherit) {
+    fill: #FBEAA8;
+  }
+  .fun-dust ._skin svg path:not(._inherit) {
+    fill: #1E429B;
+  }
+/* END COLORS */
+/* EATING */
+  figure.fun._eating ._hand-right {
+    right: 11%;
+    top: 59%;
+    width: 42%;
+  }
+  figure.fun._eating ._hand-left {
+    left: 10%;
+    top: 63%;
+    width: 15%;
+  }
+/* END EATING */
+/* HEARTING */
+  figure.fun._hearting ._hand-left {
+    top: 60%;
+    width: 40%;
+    left: 10%;
+  }
+  figure.fun._hearting ._hand-right {
+    top: 60%;
+    width: 40%;
+    right: 10%;
+  }
+  figure.fun._hearting ._heart {
+    position: absolute;
+    width: 33%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 56%;
+    z-index: 1;
+  }
+/* END HEARTING */
+/* GREETING */
+
+  figure.fun._greeting ._hand-left {
+    width: 40%;
+    top: 27%;
+    left: -8%;
+  }
+  figure.fun._greeting ._hand-right {
+    width: 40%;
+    top: 27%;
+    right: -8%;
+  }
+/* END GREETING */
+/* JUMPING */
+  figure.fun._jumping{
+    grid-gap:15%;
+  }
+  figure.fun._jumping ._hand-left {
+    top: 67%;
+    width: 20%;
+    left: 4%;
+  }
+  figure.fun._jumping ._hand-right {
+    top: 67%;
+    width: 20%;
+    right: 4%;
+  }
+  figure.fun._jumping ._foot-left,
+  figure.fun._jumping ._foot-right {
+    margin-top: -17%;
+    width: 12%;
+  }
+/* END JUMPING */
+/* HANDS UP */
+  figure.fun._handsup ._hand-left {
+    top: 45%;
+    width: 40%;
+    left: -7%;
+  }
+  figure.fun._handsup ._hand-right {
+    top: 45%;
+    width: 40%;
+    right: -7%;
+  }
+/* END HANDS UP */
+
+
+/* ANIMATIONS */
+  figure.fun._eating ._hand-right {
+    animation: eat-cookie 2.2s cubic-bezier(0,1.19,.58,.94) infinite;
+    transform-origin: top right;
+  }
+  @keyframes eat-cookie {
+    0%, 100% {
+      transform: rotate(0deg) translateY(0);
+    }
+    50% {
+      transform: rotate(12deg);
+    }
+  }
+
+  figure.fun._hearting ._heart {
+    animation: heartbeat 0.9s cubic-bezier(0,1.19,.58,.94) infinite;
+    transform-origin: center;
+  }
+  
+  @keyframes heartbeat {
+    0%, 100% {
+      transform: scale(1);
+    }
+    14% {
+      transform: scale(1.1);
+    }
+    28% {
+      transform: scale(1);
+    }
+    42% {
+      transform: scale(1.1);
+    }
+    70% {
+      transform: scale(1);
+    }
+  }
+  
+  figure.fun._greeting ._hand-left {
+    transform-origin: bottom right;
+    transform-box: fill-box; /* más preciso que content-box en SVG */
+    animation: wave-hand 1.5s ease infinite;
+    transform: rotate(-6deg);
+  }
+  figure.fun._greeting ._hand-right {
+    transform-origin: bottom left;
+    transform-box: fill-box; /* más preciso que content-box en SVG */
+    animation: wave-hand 1.5s ease infinite;
+    transform: rotate(-6deg);
+  }
+  @keyframes wave-hand {
+    0%, 100% {
+      transform: rotate(-6deg);
+    }
+    25% {
+      transform: rotate(6deg);
+    }
+    50% {
+      transform: rotate(-6deg);
+    }
+    75% {
+      transform: rotate(6deg);
+    }
+  }
+
+  figure.fun._greeting ._hand-left {
+    transform-origin: bottom right;
+    transform-box: fill-box; /* más preciso que content-box en SVG */
+    animation: wave-hand 1.5s ease infinite;
+    transform: rotate(-6deg);
+  }
+  figure.fun._greeting ._hand-right {
+    transform-origin: bottom left;
+    transform-box: fill-box; /* más preciso que content-box en SVG */
+    animation: wave-hand 1.5s ease infinite;
+    transform: rotate(-6deg);
+  }
+  @keyframes wave-hand {
+    0%, 100% {
+      transform: rotate(-6deg);
+    }
+    25% {
+      transform: rotate(6deg);
+    }
+    50% {
+      transform: rotate(-6deg);
+    }
+    75% {
+      transform: rotate(6deg);
+    }
+  }
+
+  figure.fun._jumping {
+    transform: translateY(0);
+    transform-origin: bottom center;
+    animation: jump-big 1s cubic-bezier(0,1.19,.58,.94) infinite;
+  }
+  figure.fun._jumping ._body{
+    transform: translateY(6%);
+    transform-origin: bottom center;
+    animation: jump 1s cubic-bezier(0,1.19,.58,.94) infinite;
+  }
+  figure.fun._jumping ._hand-left {
+    transform: rotate(33deg);
+    transform-origin: top right;
+    transform-box: fill-box;
+    animation: jump-hand-left 1s cubic-bezier(0,1.19,.58,.94) infinite;
+  }
+  figure.fun._jumping ._hand-right {
+    transform: rotate(-33deg);
+    transform-origin: top left;
+    transform-box: fill-box;
+    animation: jump-hand-right 1s cubic-bezier(0,1.19,.58,.94) infinite;
+  }
+
+  figure.fun._jumping ._foot-left {
+    transform: rotate(0);
+    transform-origin: top center;
+    transform-box: fill-box;
+    animation: jump-foot-left 1s cubic-bezier(0,1.19,.58,.94) infinite;
+  }
+  figure.fun._jumping ._foot-right {
+    transform: rotate(0);
+    transform-origin: top center;
+    transform-box: fill-box;
+    animation: jump-foot-right 1s cubic-bezier(0,1.19,.58,.94) infinite;
+  }
+  @keyframes jump {
+    0%, 100% {
+      transform: translateY(6%);
+    }
+    50% {
+      transform: translateY(-6%);
+    }
+  }
+  @keyframes jump-big{
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-50%);
+    }
+  }
+  @keyframes jump-hand-left {
+    0%, 100% {
+      transform: rotate(33deg);
+    }
+    50% {
+      transform: rotate(0);
+    }
+  }
+  @keyframes jump-hand-right {
+    0%, 100% {
+      transform: rotate(-33deg);
+    }
+    50% {
+      transform: rotate(0);
+    }
+  }
+
+  @keyframes jump-foot-left {
+    0%, 100% {
+      transform: rotate(0);
+    }
+    50% {
+      transform: rotate(20deg) translateY(-10%);
+    }
+  }
+  @keyframes jump-foot-right {
+    0%, 100% {
+      transform: rotate(0);
+    }
+    50% {
+      transform: rotate(-20deg) translateY(-10%);
+    }
+  }
+
+  figure.fun._handsup ._hand-left {
+    transform: rotate(0deg);
+    transform-origin: center right;
+    transform-box: fill-box;
+    animation: hands-up-left 0.9s cubic-bezier(1,-0.02,0,1.04) infinite;
+  }
+  figure.fun._handsup ._hand-right {
+    transform: rotate(0deg);
+    transform-origin: center left;
+    transform-box: fill-box;
+    animation: hands-up-right 0.9s cubic-bezier(1,-0.02,0,1.04) infinite;
+  }
+
+  @keyframes hands-up-left {
+    0%, 100% {
+      transform: rotate(0);
+    }
+    50% {
+      transform: rotate(30deg);
+    }
+  }
+  @keyframes hands-up-right {
+    0%, 100% {
+      transform: rotate(0);
+    }
+    50% {
+      transform: rotate(-30deg);
+    }
+  }
+/* END ANIMATIONS */

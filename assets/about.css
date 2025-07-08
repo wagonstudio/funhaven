@@ -1,0 +1,133 @@
+/* I */
+  section._about aside._vii {
+    position: relative;
+    padding: 10vw 0;
+  }
+  section._about aside._vii .cards-1 {
+    display: flex;
+    grid-gap: 1vw;
+    flex-wrap: wrap;
+  }
+  section._about aside._vii .cards-1 .card-1 {
+    border-radius: 1.5vw;
+    width: calc(33.33% - 0.7vw);
+    text-align: center;
+    padding: 2%;
+  }
+  section._about aside._vii .cards-1 .card-1 figure._pic img {
+    object-fit: cover;
+  }
+  section._about aside._vii .cards-1 .card-1 figure._pic {
+    width: 10vw;
+    height: 8vw;
+    overflow: hidden;
+    border-radius: 1vw;
+    margin: 0 auto 2vw;
+  }
+  section._about aside._vii .cards-1 .card-1 .title-4 {
+    margin-bottom: 2vw;
+  }
+  section._about aside._vii .cards-1 .card-1 .title-4 {
+    margin-bottom: 2vw;
+  }
+  section._about aside._vii>._container {
+    position: relative;
+  }
+  section._about aside._vii figure.fun {
+    width: 10vw;
+    position: absolute;
+    bottom: calc(100% - 4vw);
+    left: 1vw;
+    z-index:3;
+  }
+  section._about aside._vii ._container._1 ._content.d-lg-none .splide .splide__arrows button {
+    background: 0;
+    border: 0;
+  }
+  .cardy-i._3 ._front .in-front ._media, 
+  .cardy-i._3 ._front .in-front ._media img {
+    object-fit: contain;
+  }
+  .cardy-i._3 ._front .in-front ._media {
+    max-height: 40vh;
+    height: 100vw;
+  }
+  .cardy-i._3 ._front .in-front ._media figure {
+    width: 100%;
+    height: 100%;
+  }
+  @media(min-width:768px){
+    section._about aside._vii ._container._1 ._content.d-lg-none .splide .splide__arrows button svg {
+      width: 6vw;
+    }
+    section._about aside._vii ._container._1 ._content.d-lg-none .splide .splide__arrows {
+      display: flex;
+      grid-gap: 2vw;
+      align-items: center;
+      margin-top: 2vw;
+      padding-left: 2vw;
+    }
+  }
+  @media(max-width:767px){
+    section._about aside._vii ._container._1 ._content.d-lg-none .splide .splide__arrows {
+      display: flex;
+      grid-gap: 5vw;
+      align-items: center;
+      margin-top: 5vw;
+      padding-left: 2vw;
+    }
+    section._about aside._vii ._container._1 ._content.d-lg-none .splide .splide__arrows button svg {
+      width:11vw;
+    }
+    section._about aside._vii figure.fun{
+      width: 25vw;
+      position: absolute;
+      bottom: calc(100% - 11vw);
+      left: 1vw;
+      z-index: 3;
+    }
+    section._about aside._vii {
+      position: relative;
+      padding: 25vw 0 10vw;
+    }
+  }
+/* END I */
+
+
+
+
+
+section._about._i ._card {
+  opacity: 0;
+  transition: all 0.9s cubic-bezier(0,1.19,.58,.94);
+}
+.move_3 section._about._i ._card {
+  opacity: 1;
+}
+section._about._i ._items ._item {
+  opacity: 0;
+  transform: translateY(4vw);
+  transition: all 0.4s cubic-bezier(0,1.19,.58,.94);
+}
+.move_3 section._about._i ._items ._item {
+  opacity: 1;
+  transform: translateY(0);
+}
+section._about._i ._items ._item:nth-of-type(1){
+  transition-delay: 0.1s !important;
+}
+section._about._i ._items ._item:nth-of-type(2){
+  transition-delay: 0.2s !important;
+}
+section._about._i ._items ._item:nth-of-type(3){
+  transition-delay: 0.3s !important;
+}
+section._about._i ._items ._item:nth-of-type(4){
+  transition-delay: 0.4s !important;
+}
+section._about._i ._items ._item:nth-of-type(5){
+  transition-delay: 0.5s !important;
+}
+section._about._i ._items ._item:nth-of-type(6){
+  transition-delay: 0.6s !important;
+}

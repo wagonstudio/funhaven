@@ -1,0 +1,244 @@
+<section class="shopify-section--home-products _shop _i" style="background-color: {{ section.settings.background_color | default: '#fff7eb' }}">
+  <span id="trigger_shop_i_1" class="_trigger"></span>
+  <div class="_content" id="shop-banner-main">
+    <div class="_container full-1">
+      <div class="_flex justify-content-center text-center">
+        <div class="_character _1">
+          <figure class="_message _1">
+            <div class="_text">
+              <div class="text-message text-dialogue-1">Hi, I’m Moosh! Enjoy our delicious, crunchy crackers as a snackable item alone</div>
+            </div>
+            <aside class="_bg">
+              <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 303 212" fill="none">
+                <path d="M164.563 189.118C169.281 180.466 171.044 175.669 165.534 167.251C163.662 164.401 134.944 160.026 127.885 158.67C113.042 155.816 91.1012 150.714 76.49 146.814C46.1169 138.656 8.10657 138.117 0.974005 109.734C-0.796935 102.698 9.06039 17.5079 16.4777 8.23949C35.991 -16.0646 141.78 22.9145 173.148 27.0132C211.959 32.0989 265.953 44.3268 300.135 63.2417C311.463 69.5244 279.953 151.658 266.907 174.497C261.713 183.582 220.182 180.998 199.462 175.762C204.257 188.318 194.563 199.304 181.789 204.877C179.09 206.071 168.92 210.244 161.166 211.14C157.248 211.582 154.317 207.733 156.108 204.482C159.138 198.941 162.994 191.977 164.517 189.15L164.563 189.118Z" fill="#FF7F4D"/>
+              </svg>
+            </aside>
+          </figure>
+          <figure class="_fun fun-i">
+            <img class="_bg shop-bn-avtar1" src="https://cdn.shopify.com/s/files/1/0619/3971/2098/files/blue-fun-i.svg?v=1744999902" alt="Fun graphic">
+          </figure>
+        </div>
+        <div class="_head">
+          <div class="title-1 text-persimmon shop-bnnr-text">
+            <h1 data-splitting>{{ section.settings.heading | escape }}</h1>
+          </div>
+        </div>
+        <div class="_character _2">
+          <figure class="_message _1">
+            <div class="_text">
+              <div class="text-message text-dialogue-1">And I’m Lou! Or try them with hummus -- or any spread, dip, cheese, or sweet or savory topping! xoxo</div>
+            </div>
+            <aside class="_bg">
+              <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 364 252" fill="none">
+                <path d="M168.154 222.429C162.29 211.097 160.04 204.809 166.655 193.863C168.893 190.207 217.065 186.937 225.624 185.234C243.617 181.65 261.897 178.971 279.561 174.033C316.367 163.703 346.248 153.168 360.309 124.458C372.185 100.155 344.895 20.7976 310.227 6.23095C273.357 -9.20397 243.743 9.54844 205.645 14.5613C158.577 20.7521 79.19 41.6315 37.7276 65.5511C-18.8131 98.1412 1.57299 192.969 19.8723 211.142C38.1717 229.315 100.418 211.237 125.524 204.572C119.909 220.894 131.838 235.4 147.466 242.753C150.771 244.309 163.199 249.882 172.62 251.15C177.408 251.793 180.883 246.768 178.644 242.507C174.882 235.26 170.069 226.097 168.154 222.429Z" fill="#FFA9E7"/>
+              </svg>
+            </aside>
+          </figure>
+          <figure class="_fun fun-i">
+            <img class="_bg shop-bn-avtar2" src="https://cdn.shopify.com/s/files/1/0619/3971/2098/files/green-fun-ii.svg?v=1745000213" alt="Fun graphic">
+          </figure>
+        </div>
+      </div>
+    </div>
+    <figure class="_bg">
+      <div class="_in-bg">
+        <img src="https://cdn.shopify.com/s/files/1/0619/3971/2098/files/clouds_i.svg?v=1748467611">
+      </div>
+    </figure>
+  </div>
+</section>
+
+<section class="_shop _ii" style="background-color: #FFD564;">
+  <div class="_content" id="shop-product-main">
+    <div class="_container full-1">
+      <div class="_boding m-0">
+        <div class="in-boding">
+          <div class="splide splide-products _pdps _1">
+            <div class="splide__track">
+              <div class="splide__list">
+                {% assign products = collections.all.products %}
+                {% for product in products %}
+                  <div class="splide__slide">
+                    {% render 'pdp', product: product, forloop: forloop %}
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+
+  #shop-product-main .button-container {
+    text-align: center;
+    margin-top: 15px; /* Consistent spacing */
+    width: 100%; /* Ensure full width for centering */
+  }
+
+  #shop-product-main .button-container a._btn.btn-i._2.m-0-auto,
+  #shop-product-main .button-container .add-to-cart-form input[type="submit"],
+  #shop-product-main .button-container .add-to-cart-form button {
+    background-color: #ED5C2F; /* Button background color */
+    color: #ffffff; /* Button text color */
+    border-radius: 20px; /* Button border-radius */
+    border: none; /* Remove default border */
+    padding: 10px 20px; /* Consistent padding */
+    cursor: pointer; /* Pointer cursor for better UX */
+    display: inline-block; /* Ensure proper alignment */
+    text-decoration: none; /* Remove underline for links */
+    font-size: 16px; /* Consistent font size */
+    line-height: 1.5; /* Improve readability */
+  }
+
+  /* Ensure no inherited styles disrupt alignment */
+  #shop-product-main .splide__slide * {
+    box-sizing: border-box;
+  }
+
+@media (max-width: 767px) {
+  
+  #splide01-list{
+    display: flex;
+    align-content: center;
+    flex-flow: column;
+    align-items: flex-start;
+  }
+  #splide01-track{
+    padding-right: 0px !important;
+    margin-bottom: 20px !important;
+  }
+  div#splide01-slide01,
+  div#splide01-slide02,
+  div#splide01-slide03 {
+    margin-bottom: 20px;
+  }
+}
+  
+
+  
+</style>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Initialize Splide carousel
+    new Splide('.splide-products', {
+      type: 'slide',
+      gap: '2vw',
+      perPage: 4,
+      perMove: 1,
+      arrows: false,
+      pagination: false,
+      padding: { left: '0', right: '0' },
+      breakpoints: {
+        991: {
+          gap: '2vw',
+          perPage: 2,
+          padding: { left: '0', right: '0' },
+        },
+        767: {
+          gap: '5vw',
+          perPage: 1,
+          padding: { left: '0', right: '0' },
+        }
+      }
+    }).mount();
+
+    // // Assign matching unique text colors to product slides
+    // const colors = ['#FF7F4D', '#3973C6', '#208961', '#000', '#ffcc33', '#6633ff'];
+    // const slides = document.querySelectorAll('#shop-product-main .splide__slide');
+    // slides.forEach((slide, index) => {
+    //   // Apply color to title and description
+    //   const description = slide.querySelector('.product-description');
+    //   const title = slide.querySelector('[class*="title"], h2, h3');
+    //   const color = colors[index % colors.length];
+
+    //   if (description) description.style.color = color;
+    //   if (title) title.style.color = color;
+
+    //   // Organize buttons under product descriptions
+    //   const shopNowButton = slide.querySelector('a._btn.btn-i._2.m-0-auto');
+    //   const quickAddForm = slide.querySelector('.add-to-cart-form');
+    //   const buttonContainer = document.createElement('div');
+    //   buttonContainer.className = 'button-container';
+
+    //   if (shopNowButton) buttonContainer.appendChild(shopNowButton);
+    //   if (quickAddForm) buttonContainer.appendChild(quickAddForm);
+
+    //   if (description && buttonContainer.children.length > 0) {
+    //     description.insertAdjacentElement('afterend', buttonContainer);
+    //   }
+    // });
+  });
+</script>
+
+<style>
+  section._followus._i ._heading,
+  section._followus._i ._boding{
+    opacity:0;
+    transform:translatey(1vw);
+    transition:all 0.2s ease-in-out;
+  }
+</style>
+<script>
+  // ✅ Script optimizado
+  document.addEventListener('DOMContentLoaded', function() {
+    // Crear controlador global
+    var controller = new ScrollMagic.Controller();
+  
+    // Seleccionar todos los elementos target
+    var fadeElements = document.querySelectorAll('section._followus._i ._heading, section._followus._i ._boding');
+  
+    // Iterar y crear escena para cada uno
+    fadeElements.forEach(function(el) {
+      new ScrollMagic.Scene({
+        triggerElement: el,
+        triggerHook: 0.9, // Ajusta el punto de activación
+        reverse: false // True para que se oculte al hacer scroll back up
+      })
+      .on("enter", function() {
+        // Usa GSAP para mayor suavidad
+        gsap.to(el, { duration: 0.5, opacity: 1, y: '0', ease: "power2.in" });
+      })
+      .on("leave", function() {
+        // Opcional: vuelve a opacity 0
+        gsap.to(el, { duration: 0.5, opacity: 0, y: '1vw', ease: "power2.out" });
+      })
+      // .addIndicators() // Descomenta para debug
+      .addTo(controller);
+    });
+  });
+</script>
+                     
+
+                  
+{% schema %}
+  {
+    "name": "Shop Products",
+    "tag": "section",
+    "class": "shopify-section--home-products",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Shop Our Products!"
+      },
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background color",
+        "default": "#fff7eb"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Shop Products"
+      }
+    ]
+  }
+{% endschema %}

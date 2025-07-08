@@ -1,0 +1,120 @@
+<section class="_product _ii" style="background-color: {{ section.settings.background_color }};">
+  <span id="trigger_product_ii_1" class="_trigger"></span>
+  <span id="trigger_product_ii_2" class="_trigger"></span>
+  <span id="trigger_product_ii_3" class="_trigger"></span>
+  <span id="trigger_product_ii_4" class="_trigger"></span>
+  <span id="trigger_product_ii_5" class="_trigger"></span>
+  <div class="_container full-3">
+    <figure class="_land">
+      <img src="https://cdn.shopify.com/s/files/1/0619/3971/2098/files/land_1.svg?v=1745507715">
+    </figure>
+  </div>
+</section>
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function () {
+    let controller_product = new ScrollMagic.Controller({refreshInterval: 0});  
+    let product_height_i = $("section._product._i").height();
+    let product_height_ii = $("section._product._ii").height();
+    
+    var product_anim_i_1 = TweenMax.to("section._product._ii ._land img", 0.5, {transform: "translateY(10%) scale(1)", ease: Power1.easeInOut});
+    new ScrollMagic.Scene({triggerElement: "#trigger_product_ii_1", duration: (product_height_ii * 2) })
+      .setTween(product_anim_i_1)
+      .triggerHook(0.5)
+      .addIndicators()
+      .addTo(controller_product);
+  });
+</script>
+
+
+
+<script>
+
+const observer = new MutationObserver(() => {
+  // Remove divs with parent having position: absolute, overflow: visible, width: 0px, height: 0px, and child with border-color: green, bottom: -1px, right: 0px, text "start 1"
+  document.querySelectorAll('div[style*="position: absolute"][style*="overflow: visible"][style*="width: 0px"][style*="height: 0px"] > div[style*="border-color: green"][style*="bottom: -1px"][style*="right: 0px"]').forEach(div => {
+    if (div.textContent.trim() === 'start 1') {
+      div.parentElement.remove();
+    }
+  });
+
+  // Remove divs with position: absolute, overflow: visible, border-color: red, top: 100%, right: 0px, text "end 1" (removed display: none condition)
+  document.querySelectorAll('div[style*="position: absolute"][style*="overflow: visible"][style*="border-color: red"][style*="top: 100%"][style*="right: 0px"]').forEach(div => {
+    if (div.textContent.trim() === 'end 1') {
+      div.remove();
+    }
+  });
+
+  // Remove divs with parent having position: absolute, overflow: visible, border-color: blue, right: 0px, and child with transform: translateY(-100%), text "trigger 1"
+  document.querySelectorAll('div[style*="position: absolute"][style*="overflow: visible"][style*="border-color: blue"][style*="right: 0px"] > div[style*="transform: translateY(-100%)"]').forEach(div => {
+    if (div.textContent.trim() === 'trigger 1') {
+      div.parentElement.remove();
+    }
+  });
+});
+
+// Start observing the document with the configured parameters
+observer.observe(document.body, {
+  childList: true,
+  subtree: true
+});
+</script>
+
+
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+  const productDescription = document.querySelector('.product-description.text-2._rgl p');
+  if (productDescription) {
+    productDescription.innerHTML = productDescription.innerHTML.replace(/<br>/g, ' ');
+  }
+
+  function handleMobileView() {
+    if (window.innerWidth <= 768) {
+      const cardDiv = document.querySelector('.card-i._bubblegum');
+      const contentDiv = document.querySelector('._content');
+      const productDescriptionDiv = document.querySelector('.product-description.text-2._rgl');
+
+      if (cardDiv && contentDiv && productDescriptionDiv) {
+        contentDiv.innerHTML = '';
+        productDescriptionDiv.appendChild(cardDiv);
+        cardDiv.style.display = 'block';
+        cardDiv.style.margin = '0 auto';
+      }
+    } else {
+      const cardDiv = document.querySelector('.card-i._bubblegum');
+      const contentDiv = document.querySelector('._content');
+      const productDescriptionDiv = document.querySelector('.product-description.text-2._rgl');
+
+      if (cardDiv && contentDiv && productDescriptionDiv && productDescriptionDiv.contains(cardDiv)) {
+        contentDiv.appendChild(cardDiv);
+        cardDiv.style.display = '';
+        cardDiv.style.margin = '';
+      }
+    }
+  }
+
+  handleMobileView();
+  window.addEventListener('resize', handleMobileView);
+});
+</script>
+
+<script>
+  
+</script>
+
+
+
+{% schema %}
+  {
+    "name": "Product II",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background color",
+        "default": "#fff7eb"
+      }
+    ]
+  }
+{% endschema %}
